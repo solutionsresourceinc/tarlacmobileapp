@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:scrollbars="vertical"
+    tools:context="${packageName}.${activityClass}" >
+
+    <Button
+        android:id="@+id/imageButtonSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:text="@string/btn_title_announcement"
+        android:textSize="13sp" />
+
+      <Button
+        android:id="@+id/imageButtonSelector1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Button01"
+        android:layout_marginLeft="53dp"
+        android:layout_toRightOf="@+id/imageButtonSelector"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:text="@string/btn_title_calendar"
+        android:textSize="13sp" />
+    
+    
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Button01"
+        android:layout_alignBottom="@+id/Button01"
+        android:layout_alignRight="@+id/imageButtonSelector1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:text="@string/btn_title_feedback"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButtonSelector"
+        android:layout_below="@+id/imageButtonSelector"
+        android:layout_marginTop="21dp"
+        android:layout_toLeftOf="@+id/imageButtonSelector1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:text="@string/btn_title_emergency"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/Button04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Button02"
+        android:layout_below="@+id/Button02"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:text="@string/btn_title_officeno"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/Button03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Button04"
+        android:layout_alignBottom="@+id/Button04"
+        android:layout_alignLeft="@+id/Button01"
+        android:layout_toLeftOf="@+id/imageButtonSelector1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:text="@string/btn_title_jobvacancies"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/Button05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Button03"
+        android:layout_below="@+id/Button03"
+        android:layout_marginTop="21dp"
+        android:layout_toLeftOf="@+id/imageButtonSelector1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:text="@string/btn_title_services"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/Button06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Button07"
+        android:layout_alignLeft="@+id/Button04"
+        android:layout_alignRight="@+id/Button04"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:onClick="showMap"
+        android:text="@string/btn_title_travelspots"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/Button07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Button05"
+        android:layout_below="@+id/Button05"
+        android:layout_marginTop="23dp"
+        android:layout_toLeftOf="@+id/imageButtonSelector1"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/btn_menu"
+        android:text="@string/btn_title_about"
+        android:textSize="13sp" />
+
+  
+</RelativeLayout>
+</ScrollView>
