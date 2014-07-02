@@ -5,12 +5,24 @@
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        
         <!-- API 11 theme customizations can go here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>
     
     <style name="Theme.Holo.Light.Dialog.NoActionBar" parent="Theme.AppCompat.Light">
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+    
+      <style name="Theme.DeviceDefault.Light.NoActionBar" parent="Theme.AppCompat.Light" >
+   		 <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
 
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#3c3c3c</item>
+    </style>        
+      
+      
 </resources>

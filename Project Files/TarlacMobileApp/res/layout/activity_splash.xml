@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="#fff04d"
     android:paddingBottom="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
@@ -10,52 +10,31 @@
     tools:context="${packageName}.${activityClass}" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="154dp"
         android:text="@string/app_title_splash"
-        android:textColor="#ffffff"
-        android:textSize="35sp"
-        android:textStyle="normal|bold"
-        android:typeface="monospace" />
+        android:textSize="55sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/SubTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/Title"
         android:layout_centerHorizontal="true"
         android:text="@string/app_subtitle_splash"
-        android:textColor="#ffffff"
         android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo" />
-
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Rights"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="@string/app_title_rights"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#ffffff"
-        android:textSize="12sp" />
-
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView3"
-        android:layout_centerHorizontal="true" />
+        android:textSize="20sp" />
 
 </RelativeLayout>
