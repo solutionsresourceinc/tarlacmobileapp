@@ -1417,17 +1417,17 @@ containing a value of this type.
         public static final int yellow_point=0x7f0200aa;
     }
     public static final class id {
-        public static final int AboutBtn=0x7f05005d;
-        public static final int AboutTitle=0x7f050060;
+        public static final int AboutBtn=0x7f050063;
+        public static final int AboutTitle=0x7f050064;
         public static final int ActivityTitle=0x7f05004e;
         public static final int AnnounceBtn=0x7f05005e;
         public static final int AnnounceTitle=0x7f05005f;
-        public static final int EmergencyBtn=0x7f050061;
-        public static final int EmergencyTitle=0x7f050062;
-        public static final int FeedbackBtn=0x7f050063;
-        public static final int FeedbackTitle=0x7f050064;
-        public static final int OfficeBtn=0x7f050065;
-        public static final int OfficeTitle=0x7f050066;
+        public static final int EmergencyBtn=0x7f05005d;
+        public static final int EmergencyTitle=0x7f050060;
+        public static final int FeedbackBtn=0x7f050065;
+        public static final int FeedbackTitle=0x7f050066;
+        public static final int OfficeBtn=0x7f050061;
+        public static final int OfficeTitle=0x7f050062;
         public static final int PlaceContact=0x7f05006f;
         public static final int PlaceContactPerson=0x7f05006e;
         public static final int PlaceDescription=0x7f05006a;

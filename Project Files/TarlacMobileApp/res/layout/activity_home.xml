@@ -35,12 +35,12 @@
          android:layout_height="wrap_content"
          android:layout_alignBaseline="@+id/TravelBtn"
          android:layout_alignBottom="@+id/TravelBtn"
-         android:layout_alignRight="@+id/AboutBtn"
+         android:layout_alignRight="@+id/EmergencyBtn"
          android:layout_marginLeft="110dp"
          android:gravity="center"
          android:text="@string/btn_title_travelspots"
          android:textColor="#FFFFFF"
-         android:textSize="35sp" />
+         android:textSize="20sp" />
      
     <Button
         android:id="@+id/AnnounceBtn"
@@ -65,14 +65,64 @@
          />
 
     <Button
-        android:id="@+id/AboutBtn"
+        android:id="@+id/EmergencyBtn"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_above="@+id/AnnounceTitle"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@+id/AnnounceBtn"
-        android:background="@drawable/xml_about_hover"/>
+        android:background="@drawable/xml_emergency_hover"
+        android:onClick="showHotlines"/>
     
+    
+    <TextView
+        android:id="@+id/EmergencyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EmergencyBtn"
+        android:layout_alignRight="@+id/EmergencyBtn"
+        android:layout_below="@+id/EmergencyBtn"
+        android:layout_marginTop="11dp"
+        android:gravity="center"
+        android:text="@string/btn_title_emergency"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        />
+    
+     <Button
+          android:id="@+id/OfficeBtn"
+          android:layout_width="120dp"
+          android:layout_height="120dp"
+          android:layout_alignLeft="@+id/AnnounceTitle"
+          android:layout_alignRight="@+id/AnnounceTitle"
+          android:layout_below="@+id/AnnounceTitle"
+          android:layout_marginTop="30dp"
+          android:background="@drawable/xml_officeno_hover"
+           />
+        
+    <TextView
+        android:id="@+id/OfficeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AnnounceBtn"
+        android:layout_alignRight="@+id/AnnounceBtn"
+        android:layout_below="@+id/OfficeBtn"
+        android:layout_marginTop="11dp"
+        android:gravity="center"
+        android:text="@string/btn_title_officeno"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        />
+
+   <Button
+        android:id="@+id/AboutBtn"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignBaseline="@+id/OfficeBtn"
+        android:layout_alignBottom="@+id/OfficeBtn"
+        android:layout_alignRight="@+id/EmergencyBtn"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/xml_about_hover"/>
     
     <TextView
         android:id="@+id/AboutTitle"
@@ -86,89 +136,32 @@
         android:text="@string/btn_title_about"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        />
-     
-    
-      <Button
-          android:id="@+id/EmergencyBtn"
-          android:layout_width="120dp"
-          android:layout_height="120dp"
-          android:layout_alignLeft="@+id/AnnounceTitle"
-          android:layout_alignRight="@+id/AnnounceTitle"
-          android:layout_below="@+id/AnnounceTitle"
-          android:layout_marginTop="30dp"
-          android:background="@drawable/xml_emergency_hover"
-          android:onClick="showHotlines" />
-        
-    <TextView
-        android:id="@+id/EmergencyTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/AnnounceBtn"
-        android:layout_alignRight="@+id/AnnounceBtn"
-        android:layout_below="@+id/EmergencyBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_emergency"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        />
-    
-    
+         />
+   
     <Button
         android:id="@+id/FeedbackBtn"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_alignBaseline="@+id/EmergencyBtn"
-        android:layout_alignBottom="@+id/EmergencyBtn"
-        android:layout_alignRight="@+id/AboutBtn"
+        android:layout_alignLeft="@+id/OfficeTitle"
+        android:layout_below="@+id/OfficeTitle"
         android:layout_marginTop="30dp"
         android:background="@drawable/xml_feedback_hover"/>
     
-    <TextView
+    
+     <TextView
         android:id="@+id/FeedbackTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/AboutBtn"
-        android:layout_alignRight="@+id/AboutBtn"
-        android:layout_below="@+id/EmergencyBtn"
+        android:layout_alignLeft="@+id/FeedbackBtn"
+        android:layout_alignRight="@+id/FeedbackBtn"
+        android:layout_below="@+id/FeedbackBtn"
         android:layout_marginTop="11dp"
         android:gravity="center"
         android:text="@string/btn_title_feedback"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-         />
-    
-    
-    <Button
-        android:id="@+id/OfficeBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignLeft="@+id/EmergencyTitle"
-        android:layout_below="@+id/EmergencyTitle"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/xml_officeno_hover"/>
-    
-    
-     <TextView
-        android:id="@+id/OfficeTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/OfficeBtn"
-        android:layout_alignRight="@+id/OfficeBtn"
-        android:layout_below="@+id/OfficeBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_officeno"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
         />
     
-    
-    
-
-   
-   
 </RelativeLayout>
 
 </ScrollView>

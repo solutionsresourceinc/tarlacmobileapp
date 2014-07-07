@@ -55,7 +55,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCCh-njK8IcSFTtSYsvyhZn1pYwuf_UN7s" />
+            android:value="AIzaSyDKczGsxb0g9mmHbJ-qjJxLhRjALMfGpZ8" />
 
         <activity
             android:name="com.visittarlac.tarlacmobileapp.EmergencyActivity"

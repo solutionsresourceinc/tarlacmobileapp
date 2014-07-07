@@ -55,6 +55,8 @@ public class TravelActivity extends Activity {
         TextView tv = (TextView) findViewById(R.id.ActivityTitle);
         tv.setTypeface(tf);
         
+        
+        
      
         SetCustomTitle();
         

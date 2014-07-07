@@ -92,7 +92,7 @@ public class HomeActivity extends Activity {
         tv5.setTypeface(tf5);
         
         Typeface tf6 = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Regular.otf");
+                "fonts/Gotham-Bold.otf");
         TextView tv6 = (TextView) findViewById(R.id.TravelTitle);
         tv6.setTypeface(tf6);
         
