@@ -77,5 +77,6 @@
     <string name="btn_download9">Application for Civil Service Examination</string>
     <string name="btn_download10">Form 200 – New EOR Format </string>
     <string name="title_activity_place_description">PlaceDescriptionActivity</string>
+    <string name="title_activity_announcement">AnnouncementActivity</string>
 
 </resources>

@@ -35,7 +35,7 @@
          android:layout_height="wrap_content"
          android:layout_alignBaseline="@+id/TravelBtn"
          android:layout_alignBottom="@+id/TravelBtn"
-         android:layout_alignRight="@+id/CalendarBtn"
+         android:layout_alignRight="@+id/AboutBtn"
          android:layout_marginLeft="110dp"
          android:gravity="center"
          android:text="@string/btn_title_travelspots"
@@ -64,30 +64,30 @@
         android:textSize="18sp"
          />
 
-    
-     <Button
-        android:id="@+id/CalendarBtn"
+    <Button
+        android:id="@+id/AboutBtn"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_above="@+id/AnnounceTitle"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@+id/AnnounceBtn"
-        android:background="@drawable/xml_calendar_hover" />
+        android:background="@drawable/xml_about_hover"/>
     
     
     <TextView
-        android:id="@+id/CalendarTitle"
+        android:id="@+id/AboutTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/CalendarBtn"
-        android:layout_alignRight="@+id/CalendarBtn"
-        android:layout_below="@+id/CalendarBtn"
+        android:layout_alignLeft="@+id/AboutBtn"
+        android:layout_alignRight="@+id/AboutBtn"
+        android:layout_below="@+id/AboutBtn"
         android:layout_marginTop="11dp"
         android:gravity="center"
-        android:text="@string/btn_title_calendar"
+        android:text="@string/btn_title_about"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-         />
+        />
+     
     
       <Button
           android:id="@+id/EmergencyBtn"
@@ -121,7 +121,7 @@
         android:layout_height="120dp"
         android:layout_alignBaseline="@+id/EmergencyBtn"
         android:layout_alignBottom="@+id/EmergencyBtn"
-        android:layout_alignRight="@+id/CalendarBtn"
+        android:layout_alignRight="@+id/AboutBtn"
         android:layout_marginTop="30dp"
         android:background="@drawable/xml_feedback_hover"/>
     
@@ -129,8 +129,8 @@
         android:id="@+id/FeedbackTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/CalendarBtn"
-        android:layout_alignRight="@+id/CalendarBtn"
+        android:layout_alignLeft="@+id/AboutBtn"
+        android:layout_alignRight="@+id/AboutBtn"
         android:layout_below="@+id/EmergencyBtn"
         android:layout_marginTop="11dp"
         android:gravity="center"
@@ -141,35 +141,11 @@
     
     
     <Button
-        android:id="@+id/JobBtn"
+        android:id="@+id/OfficeBtn"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_alignLeft="@+id/EmergencyTitle"
         android:layout_below="@+id/EmergencyTitle"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/xml_jobvacant_hover"/>
-    
-    <TextView
-        android:id="@+id/JobTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/JobBtn"
-        android:layout_alignRight="@+id/JobBtn"
-        android:layout_below="@+id/JobBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_jobvacancies"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        />
-    
-
-    <Button
-        android:id="@+id/OfficeBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignRight="@+id/FeedbackTitle"
-        android:layout_below="@+id/FeedbackTitle"
         android:layout_marginTop="30dp"
         android:background="@drawable/xml_officeno_hover"/>
     
@@ -189,55 +165,7 @@
         />
     
     
-    <Button
-        android:id="@+id/ServicesBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignLeft="@+id/JobTitle"
-        android:layout_below="@+id/JobTitle"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/xml_services_hover"/>
     
-     
-     <TextView
-        android:id="@+id/ServicesTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ServicesBtn"
-        android:layout_alignRight="@+id/ServicesBtn"
-        android:layout_below="@+id/ServicesBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_services"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        />
-   
-  
-    
-    <Button
-        android:id="@+id/AboutBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignRight="@+id/OfficeTitle"
-        android:layout_below="@+id/OfficeTitle"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/xml_about_hover"/>
-    
-    
-    <TextView
-        android:id="@+id/AboutTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/AboutBtn"
-        android:layout_alignRight="@+id/AboutBtn"
-        android:layout_below="@+id/AboutBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_about"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        />
 
    
    

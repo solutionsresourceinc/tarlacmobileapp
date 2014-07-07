@@ -59,21 +59,25 @@
 
         <activity
             android:name="com.visittarlac.tarlacmobileapp.EmergencyActivity"
-            android:label="@string/title_activity_emergency" 
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_emergency"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.visittarlac.tarlacmobileapp.CalendarActivity"
-            android:label="@string/title_activity_feedback" 
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_feedback"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.visittarlac.tarlacmobileapp.PlaceDescriptionActivity"
-            android:label="@string/title_activity_place_description"
             android:configChanges="orientation"
+            android:label="@string/title_activity_place_description"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.visittarlac.tarlacmobileapp.AnnouncementActivity"
+            android:label="@string/title_activity_announcement" >
         </activity>
     </application>
 

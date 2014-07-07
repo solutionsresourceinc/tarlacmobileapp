@@ -73,7 +73,7 @@ public class HomeActivity extends Activity {
         
         Typeface tf2 = Typeface.createFromAsset(getAssets(),
                 "fonts/ProximaNova-Regular.otf");
-        TextView tv2 = (TextView) findViewById(R.id.CalendarTitle);
+        TextView tv2 = (TextView) findViewById(R.id.AboutTitle);
         tv2.setTypeface(tf2);
         
         Typeface tf3 = Typeface.createFromAsset(getAssets(),
@@ -88,28 +88,17 @@ public class HomeActivity extends Activity {
         
         Typeface tf5 = Typeface.createFromAsset(getAssets(),
                 "fonts/ProximaNova-Regular.otf");
-        TextView tv5 = (TextView) findViewById(R.id.JobTitle);
+        TextView tv5 = (TextView) findViewById(R.id.OfficeTitle);
         tv5.setTypeface(tf5);
         
         Typeface tf6 = Typeface.createFromAsset(getAssets(),
                 "fonts/ProximaNova-Regular.otf");
-        TextView tv6 = (TextView) findViewById(R.id.OfficeTitle);
+        TextView tv6 = (TextView) findViewById(R.id.TravelTitle);
         tv6.setTypeface(tf6);
         
-        Typeface tf7 = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Regular.otf");
-        TextView tv7 = (TextView) findViewById(R.id.ServicesTitle);
-        tv7.setTypeface(tf7);
+     
         
-        Typeface tf8 = Typeface.createFromAsset(getAssets(),
-                "fonts/BebasNeue Bold.otf");
-        TextView tv8 = (TextView) findViewById(R.id.TravelTitle);
-        tv8.setTypeface(tf8);
-        
-        Typeface tf9 = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Regular.otf");
-        TextView tv9 = (TextView) findViewById(R.id.AboutTitle);
-        tv9.setTypeface(tf9);
+       
 	}
 	
 	public void showMap(View view) {
