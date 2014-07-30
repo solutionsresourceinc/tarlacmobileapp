@@ -1,0 +1,185 @@
+{
+   "Places":[
+      {
+         "name":"Tarlac Province",
+         "address":"Address Here",
+         "lat":15.475245,
+         "lng":120.593438,
+         "category":"",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Tessie's Grill & Roasters",
+         "address":"Address Here",
+         "lat":15.477523,
+         "lng":120.595734,
+         "category":"dine",
+         "image": "R.drawable.plcdesc_tessie",
+         "description": "Offering lots of different food and flavors, TG&R boasts of roasted chicken and ribs that are original recipes of its proprietor. Proudly Tarlaqueño!"
+      },
+      {
+         "name":"Isdaan Floating Restaurant",
+         "address":"Address Here",
+         "lat":15.593400,
+         "lng":120.609021,
+         "category":"dine",
+         "image": "R.drawable.plcdesc_isdaan",
+         "description": "A one-of-a-kind in the Province of Tarlac, this restaurant is filled with great Filipino dishes, floating nipa huts, family entertainment and games for all ages, all in a 6-hectare floating wonderland."
+      },
+      {
+         "name":"Izakaya Cowan Grill",
+         "address":"Address Here",
+         "lat":15.432326,
+         "lng":120.599400,
+         "category":"dine",
+         "image": "R.drawable.plcdesc_izakaya_cowan",
+         "description": "Craving for Jap? This authentic Japanese restaurant is located at the heart of Luisita Park,led by a seasoned chef specializing in Japanese cuisine."
+      },
+      {
+         "name":"Ninoy Aquino Ancestral House",
+         "address":"Address Here",
+         "lat":15.324247,
+         "lng":120.657152,
+         "category":"visit",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Monasterio de Tarlac",
+         "address":"Address Here",
+         "lat":15.436534,
+         "lng":120.431238,
+         "category":"visit",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Tarlac Provincial Capitol",
+         "address":"Address Here",
+         "lat":15.480356,
+         "lng":120.588166,
+         "category":"visit",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"San Sebastian Cathedral",
+         "address":"Address Here",
+         "lat":15.487714,
+         "lng":120.588054,
+         "category":"visit",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Capas National Shrine",
+         "address":"Address Here",
+         "lat":15.349029,
+         "lng":120.545254,
+         "category":"visit",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"JSJ Goat Farm",
+         "address":"Address Here",
+         "lat":15.631385,
+         "lng":120.599620,
+         "category":"visit",
+         "image": "R.drawable.plcdesc_goatfarm",
+         "description": "Uniquely located on the plains of Gerona, Tarlac, JSJ Goat Farm boasts of a technologically advanced and well-researched facility and well-bred Australian goats. Producing different types of cheese, pastillas, cajetas and fresh goat’s milk, JSJ Farm is in the market as Aussie Pure Goat’s Milk all over the country."
+      },
+      {
+         "name":"St.Josemaria Escriva Parish",
+         "address":"Address Here",
+         "lat":15.622769,
+         "lng":120.594722,
+         "category":"visit",
+         "image": "R.drawable.plcdesc_sjeparish",
+         "description": "A newly constructed church along MacArthur Highway in the town of Gerona, the St.Josemaria Escriva Parish is home to St. Escriva’s true relic, the only one in Asia."
+      },
+      {
+         "name":"Asiaten Hotel",
+         "address":"Address Here",
+         "lat":15.470614,
+         "lng":120.596102,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Central Park Hotel",
+         "address":"Address Here",
+         "lat":15.439120,
+         "lng":120.604581,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"La Majarica Hotel",
+         "address":"Address Here",
+         "lat":15.483420,
+         "lng":120.595372,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Microtel Inn and Suites",
+         "address":"Address Here",
+         "lat":15.439835,
+         "lng":120.602244,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Star Homes Hotel & Apartment",
+         "address":"Address Here",
+         "lat":15.466169,
+         "lng":120.579590,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Grand L Square Hotel",
+         "address":"Address Here",
+         "lat":15.458413,
+         "lng":120.599078,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"Azaya Garden Resort",
+         "address":"Address Here",
+         "lat":15.405929,
+         "lng":120.599366,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_azaya",
+         "description": "A fusion of good food, karaoke huts, spacious events area, cozy rooms, swimming pool, and tons of adventure activities, Azaya Garden Resort is a one-stop place for your leisure and recreation."
+         
+      },
+      {
+         "name":"Sun Garden Hotel",
+         "address":"Address Here",
+         "lat":15.485483,
+         "lng":120.597522,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      },
+      {
+         "name":"The Luisita Golf and Country Club",
+         "address":"Address Here",
+         "lat":15.435215,
+         "lng":120.621380,
+         "category":"chill",
+         "image": "R.drawable.plcdesc_noimage",
+         "description": ""
+      }
+   ]
+}
