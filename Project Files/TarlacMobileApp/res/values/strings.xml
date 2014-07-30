@@ -79,4 +79,15 @@
     <string name="title_activity_place_description">PlaceDescriptionActivity</string>
     <string name="title_activity_announcement">AnnouncementActivity</string>
 
+    <!-- Strings of Dropdown on Travel Spots -->
+    <string-array name="places_array">
+        <item>Places to Visit</item>
+        <item>Places to Chill</item>
+        <item>Places to Shop</item>
+        <item>Places to Dine</item>
+    </string-array>
+
+    <string name="title_activity_list_of_places">ListOfPlacesActivity</string>
+    <string name="title_activity_selected_place">SelectedPlaceActivity</string>
+
 </resources>

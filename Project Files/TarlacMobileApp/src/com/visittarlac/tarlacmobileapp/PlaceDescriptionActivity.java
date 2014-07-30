@@ -1,12 +1,19 @@
 package com.visittarlac.tarlacmobileapp;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -88,7 +95,7 @@ public class PlaceDescriptionActivity extends Activity {
         
         PlaceName = (TextView) findViewById(R.id.PlaceTitle);
 		PlaceSnippet = (TextView) findViewById(R.id.PlaceSnippet);
-		
+		PlaceDesc =(TextView)findViewById(R.id.PlaceDescription);
 	
 	    Intent intent = getIntent();
 	    String placetitle = intent.getStringExtra("placetitle");
@@ -97,10 +104,6 @@ public class PlaceDescriptionActivity extends Activity {
 	    
 	    PlaceName.setText(placetitle);
 	    PlaceSnippet.setText(snippet);
-	    
-	    PlaceImage = (ImageView)findViewById(R.id.PlaceImage);  
-	    
-	    PlaceDesc =(TextView)findViewById(R.id.PlaceDescription);
 	    
 
 	    //Call Contact Person Button
@@ -117,50 +120,90 @@ public class PlaceDescriptionActivity extends Activity {
 	   });
 		    
 	    
-	    placename = intent.getStringExtra("placetitle"); 
-	    
-	    if (placename.equals("Azaya Garden Resort")) {
-	    	PlaceImage.setImageResource(R.drawable.plcdesc_azaya);  
-	    	PlaceDesc.setText("A fusion of good food, karaoke huts, spacious events area, cozy rooms, swimming pool, and tons of adventure activities, Azaya Garden Resort is a one-stop place for your leisure and recreation.");
-	    	PlaceContact.setText("123456789");
-    	} 
-	    
-	    else if (placename.equals("Isdaan Floating Restaurant")) {
-	    	PlaceImage.setImageResource(R.drawable.plcdesc_isdaan);  
-	    	PlaceDesc.setText("A one-of-a-kind in the Province of Tarlac, this restaurant is filled with great Filipinodishes, floating nipa huts, family entertainment and games for all ages, all in a 6-hectare floating wonderland.");
-	    	PlaceContact.setSystemUiVisibility(View.INVISIBLE);
-	    } 
-	    
-	    else if (placename.equals("JSJ Goat Farm")) {
-	    	PlaceImage.setImageResource(R.drawable.plcdesc_goatfarm);  
-	    	PlaceDesc.setText("Uniquely located on the plains of Gerona, Tarlac, JSJ Goat Farm boasts of a technologically advanced and well-researched facility and well-bred Australian goats. Producing different types of cheese, pastillas, cajetas and fresh goat’s milk, JSJ Farm is in the market as Aussie Pure Goat’s Milk all over the country.");
-	    	PlaceContact.setText("123456789");
-	    } 
-	    
-	    else if (placename.equals("Tessie's Grill & Roasters")) {
-	    	PlaceImage.setImageResource(R.drawable.plcdesc_tessie);  
-	    	PlaceDesc.setText("Offering lots of different food and flavors, TG&R boasts of roasted chicken and ribs that are original recipes of its proprietor. Proudly Tarlaqueño!");
-	    	PlaceContact.setText("123456789");
-	    } 
-	    
-	    else if (placename.equals("Izakaya Cowan Grill")) {
-	    	PlaceImage.setImageResource(R.drawable.plcdesc_izakaya_cowan);  
-	    	PlaceDesc.setText("Craving for Jap? This authentic Japanese restaurant is located at the heart of Luisita Park, led by a seasoned chef specializing in Japanese cuisine.");
-	    	PlaceContact.setText("123456789");
-	    } 
-	    else if (placename.equals("St.Josemaria Escriva Parish")) {
-	    	PlaceImage.setImageResource(R.drawable.plcdesc_sjeparish);  
-	    	PlaceDesc.setText("A newly constructed church along MacArthur Highway in the town of Gerona, the St. Josemaria Escriva Parish is home to St. Escriva’s true relic, the only one in Asia.");
-	    	PlaceContact.setText("123456789");
-	    } 
-	    
-	    
+
+    	ArrayList<String> nameList = new ArrayList<String>();
+    	ArrayList<String> addressList = new ArrayList<String>();
+    	ArrayList<String> descriptionList = new ArrayList<String>();
+    	ArrayList<String> imageList = new ArrayList<String>();
+    	
+    	
+
+        
+		try {
+			JSONObject obj;
+			obj = new JSONObject(loadJSONFile());
+			JSONArray m_jArry = obj.getJSONArray("Places");
+			for (int i = 0; i < m_jArry.length(); i++) {
+				JSONObject jo_inside = m_jArry.getJSONObject(i);
+				String name_value = jo_inside.getString("name");
+				String address_value = jo_inside.getString("address");
+				String description_value = jo_inside.getString("description");
+				String image_value = jo_inside.getString("image");
+				
+				
+				
+				nameList.add(name_value);
+				addressList.add(address_value);
+				descriptionList.add(description_value);
+				imageList.add(image_value);
+			
+				
+			}
+
+			for(int i=0;i<nameList.size();i++){
+				
+				
+				if (nameList.get(i).equals(placetitle)){
+					
+						PlaceImage = (ImageView)findViewById(R.id.PlaceImage);
+						
+						JSONObject jo_inside = m_jArry.getJSONObject(i);
+						String image_value = jo_inside.getString("image");
+						String resName = image_value.split("\\.")[2]; // remove the 'R.drawable.' prefix
+						int resId = getResources().getIdentifier(resName, "drawable", getPackageName());
+					    Drawable image = getResources().getDrawable(resId);
+						PlaceImage.setImageDrawable(image);
+						PlaceDesc.setText(descriptionList.get(i));
+						PlaceContact.setText("123456789");
+
+				}	 
+			}
+			
+    		} catch (JSONException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+
+	      
 	}
 	
 	 public void SetCustomTitle(){
 	    	TextView textViewTitle = (TextView) findViewById(R.id.ActivityTitle);
 	    	textViewTitle.setText("INFORMATION");
 	    	}
-	 	
-	
+	 
+	 public String loadJSONFile() {
+	        String json = null;
+	        try {
+
+	            InputStream is = getAssets().open("map_location.json");
+
+	            int size = is.available();
+
+	            byte[] buffer = new byte[size];
+
+	            is.read(buffer);
+
+	            is.close();
+
+	            json = new String(buffer, "UTF-8");
+
+
+	        } catch (IOException ex) {
+	            ex.printStackTrace();
+	            return null;
+	        }
+	        return json;
+
+	    }
 }

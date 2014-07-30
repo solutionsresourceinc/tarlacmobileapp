@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"> 
 
    
    <fragment 
@@ -9,6 +9,77 @@
       android:id="@+id/map"
       android:name="com.google.android.gms.maps.MapFragment"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
+      android:layout_height="match_parent"
+      />
 
+   <FrameLayout
+       android:id="@+id/fram_map"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentTop="true" >
+
+       <ImageButton
+           android:id="@+id/btnvisit"
+           android:layout_width="47dp"
+           android:layout_height="45dp"
+           android:layout_gravity="right|top"
+           android:layout_marginRight="7dp"
+           android:layout_marginTop="55dp"
+           android:background="@drawable/xml_btn_filter"
+           android:src="@drawable/filter_visit" />
+
+       <ImageButton
+           android:id="@+id/btndine"
+           android:layout_width="47dp"
+           android:layout_height="45dp"
+           android:layout_gravity="right|top"
+           android:layout_marginRight="7dp"
+           android:layout_marginTop="105dp"
+           android:background="@drawable/xml_btn_filter"
+           android:src="@drawable/filter_dine" />
+
+       <ImageButton
+           android:id="@+id/btnchill"
+           android:layout_width="47dp"
+           android:layout_height="45dp"
+           android:layout_gravity="right|top"
+           android:layout_marginRight="7dp"
+           android:layout_marginTop="155dp"
+           android:background="@drawable/xml_btn_filter"
+           android:src="@drawable/filter_chill" />
+
+       <ImageButton
+           android:id="@+id/btnshop"
+           android:layout_width="47dp"
+           android:layout_height="45dp"
+           android:layout_gravity="right|top"
+           android:layout_marginRight="7dp"
+           android:layout_marginTop="205dp"
+           android:background="@drawable/xml_btn_filter"
+           android:src="@drawable/filter_shop" />
+
+       <ImageButton
+           android:id="@+id/btnlist"
+           android:layout_width="47dp"
+           android:layout_height="45dp"
+           android:layout_gravity="right|top"
+           android:layout_marginRight="7dp"
+           android:layout_marginTop="305dp"
+           android:background="@drawable/xml_btn_filter"
+           android:src="@drawable/filter_list" 
+           android:onClick="ShowList"/>
+       
+        <ImageButton
+           android:id="@+id/btnref"
+           android:layout_width="47dp"
+           android:layout_height="45dp"
+           android:layout_gravity="right|top"
+           android:layout_marginRight="7dp"
+           android:layout_marginTop="255dp"
+           android:background="@drawable/xml_btn_filter"
+           android:src="@drawable/filter_refresh" />
+        
+   </FrameLayout>
+   
 </RelativeLayout>

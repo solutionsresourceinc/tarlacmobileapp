@@ -55,7 +55,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDKczGsxb0g9mmHbJ-qjJxLhRjALMfGpZ8" />
+            android:value="AIzaSyCseSuxaFi4yL-vkyev5by-fX5sN9_w5bk" />
 
         <activity
             android:name="com.visittarlac.tarlacmobileapp.EmergencyActivity"
@@ -78,6 +78,14 @@
         <activity
             android:name="com.visittarlac.tarlacmobileapp.AnnouncementActivity"
             android:label="@string/title_activity_announcement" >
+        </activity>
+        <activity
+            android:name="com.visittarlac.tarlacmobileapp.ListOfPlacesActivity"
+            android:label="@string/title_activity_list_of_places" >
+        </activity>
+        <activity
+            android:name="com.visittarlac.tarlacmobileapp.SelectedPlaceActivity"
+            android:label="@string/title_activity_selected_place" >
         </activity>
     </application>
 

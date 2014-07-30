@@ -1,35 +1,40 @@
 package com.visittarlac.tarlacmobileapp;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+
+
+
+import android.widget.Toast;
 
 import com.google.android.gms.maps.*;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
-import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
-import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class TravelActivity extends Activity {
-	
-	private int dine , visit , chill;
+public class TravelActivity extends Activity implements OnClickListener {
+
 	GoogleMap map;
-	String placename;
-	
+
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +43,7 @@ public class TravelActivity extends Activity {
         
         //Actionbar center
         getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-      	getActionBar().setCustomView(R.layout.abs_layout_with_backbtn);
+      	getActionBar().setCustomView(R.layout.abs_layout_maps);
     	
       	
         ImageButton BackBtn = (ImageButton)findViewById(R.id.back_btn);
@@ -55,186 +60,36 @@ public class TravelActivity extends Activity {
         TextView tv = (TextView) findViewById(R.id.ActivityTitle);
         tv.setTypeface(tf);
         
-        
-        
-     
+       
+        //custon ActionBar Name
         SetCustomTitle();
         
-        dine=R.drawable.marker_restaurant;
-        visit=R.drawable.marker_places;
-        chill=R.drawable.marker_chill;
-
-        // Get a handle to the Map Fragment
-        GoogleMap map = ((MapFragment) getFragmentManager()
-                .findFragmentById(R.id.map)).getMap();
-
+        //Parse JsonObject
+        JSONParser();
         
+        //Button Filters
+        ImageButton btn1 = (ImageButton)findViewById(R.id.btnvisit);
+        btn1.setOnClickListener(this);
+
+        ImageButton btn2 = (ImageButton)findViewById(R.id.btndine);
+        btn2.setOnClickListener(this);
+
+        ImageButton btn3 = (ImageButton)findViewById(R.id.btnchill);
+        btn3.setOnClickListener(this);
+        
+        ImageButton btn4 = (ImageButton)findViewById(R.id.btnshop);
+        btn4.setOnClickListener(this);
+        
+        ImageButton btn5 = (ImageButton)findViewById(R.id.btnref);
+        btn5.setOnClickListener(this);
+        
+        ImageButton btn6 = (ImageButton)findViewById(R.id.btnlist);
+        btn6.setOnClickListener(this);
       
         
-        //Location of tarlac
-        LatLng Tarlac = new LatLng( 15.475245, 120.593438);
         
-        
-        //Places to dine
-       
-        LatLng TessieGrill = new LatLng(15.477523, 120.595734);
-        LatLng IsdaanFloatingResto = new LatLng(15.593400, 120.609021);
-        LatLng IzakayaCowanGrill = new LatLng(15.432326, 120.599400);
-        
-        //Places to visit
-        LatLng NinoyAquinoAncestralHouse = new LatLng(15.324247, 120.657152);
-        LatLng MonasteriodeTarlac = new LatLng(15.436534, 120.431238);
-        LatLng TarlacCapitol = new LatLng(15.480356, 120.588166);
-        LatLng SanSebastianCathedral = new LatLng(15.487714, 120.588054);
-        LatLng CapasNationalShrine = new LatLng(15.349029, 120.545254);
-        LatLng JSJGoatFarm = new LatLng(15.631385, 120.599620);
-        LatLng JosemariaParish = new LatLng(15.622769, 120.594722);
-        
-        //Places to chill
-        LatLng AsiaTenHotel = new LatLng(15.470614, 120.596102);
-        LatLng CentralParkHotel = new LatLng(15.439120, 120.604581);
-        LatLng LaMajaricaHotel = new LatLng(15.483420, 120.595372);
-        LatLng MicrotelInnAndSuites = new LatLng(15.439835, 120.602244);
-        LatLng StarHomesHotelApartment = new LatLng(15.466169, 120.579590);
-        LatLng GrandLSquareResidences = new LatLng(15.458413, 120.599078);
-        LatLng AzayaGardenResort = new LatLng(15.405929, 120.599366);
-        LatLng SunGardenHotel = new LatLng(15.485483, 120.597522);
-        LatLng LuisitaGolf = new LatLng(15.435215, 120.621380);
-       
         
 
-        map.setMyLocationEnabled(true);
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(Tarlac, 10));
-
-        //Places to Dine Map Markers
-        map.addMarker(new MarkerOptions()
-        .title("Tessie's Grill & Roasters")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(dine))
-        .position(TessieGrill));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Isdaan Floating Restaurant")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(dine))
-        .position(IsdaanFloatingResto));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Izakaya Cowan Grill")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(dine))
-        .position(IzakayaCowanGrill));
-        
-        
-        
-        
-        //Places to Visit Map Markers
-        map.addMarker(new MarkerOptions()
-        .title("Ninoy Aquino Ancestral House")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(visit))
-        .position(NinoyAquinoAncestralHouse));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Monasterio de Tarlac")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(visit))
-        .position(MonasteriodeTarlac));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Tarlac Provincial Capitol")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(visit))
-        .position(TarlacCapitol));
-        
-        map.addMarker(new MarkerOptions()
-        .title("San Sebastian Cathedral")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(visit))
-        .position(SanSebastianCathedral));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Capas National Shrine")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(visit))
-        .position(CapasNationalShrine));
-        
-        map.addMarker(new MarkerOptions()
-        .title("JSJ Goat Farm")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(visit))
-        .position(JSJGoatFarm));
-        
-        map.addMarker(new MarkerOptions()
-        .title("St.Josemaria Escriva Parish")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(visit))
-        .position(JosemariaParish));
-        
-        
-        
-        //Places to chill Map Markers
-        map.addMarker(new MarkerOptions()
-        .title("Asiaten Hotel")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position(AsiaTenHotel));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Central Park Hotel")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position(CentralParkHotel));
-        
-        map.addMarker(new MarkerOptions()
-        .title("La Majarica Hotel")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position(LaMajaricaHotel));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Microtel Inn and Suites")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position(MicrotelInnAndSuites));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Star Homes Hotel & Apartment")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position(StarHomesHotelApartment));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Grand L Square Hotel")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position( GrandLSquareResidences ));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Azaya Garden Resort")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position(AzayaGardenResort));
-        
-        map.addMarker(new MarkerOptions()
-        .title("Sun Garden Hotel")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position( SunGardenHotel));
-        
-        map.addMarker(new MarkerOptions()
-        .title("The Luisita Golf and Country Club")
-        .snippet("Address goes here")
-        .icon(BitmapDescriptorFactory.fromResource(chill))
-        .position(LuisitaGolf));
-        
-        
-        
-        
-        //Map Design
-        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-    
-        
         //Set Custom InfoWindow
         map.setInfoWindowAdapter(new InfoWindowAdapter() {
         
@@ -277,11 +132,272 @@ public class TravelActivity extends Activity {
 	
 	        }
 	    });
+	  
+
+    }
+
+    //Filter Button Onclick Event
+	public void onClick(View v) {
+
+		ArrayList<Double> latList = new ArrayList<Double>();
+    	ArrayList<Double> lngList = new ArrayList<Double>();
+    	ArrayList<String> nameList = new ArrayList<String>();
+    	ArrayList<String> addressList = new ArrayList<String>();
+    	ArrayList<String> markerList = new ArrayList<String>();
+    	
+		try { 
+			JSONObject obj;
+			obj = new JSONObject(loadJSONFile());
+			JSONArray m_jArry = obj.getJSONArray("Places");
+			for (int i = 0; i < m_jArry.length(); i++) {
+				JSONObject jo_inside = m_jArry.getJSONObject(i);
+				String name_value = jo_inside.getString("name");
+				String address_value = jo_inside.getString("address");
+				String marker_value = jo_inside.getString("category");
+				double lat_value = jo_inside.getDouble("lat");
+				double lng_value = jo_inside.getDouble("lng");
+				nameList.add(name_value);
+				addressList.add(address_value);
+				markerList.add(marker_value);
+				latList.add(lat_value);
+				lngList.add(lng_value);
+				
+			}
+
+			
+    		} catch (JSONException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+		
+
+		switch (v.getId()) {
+
+		case R.id.btnvisit:
+			
+			map.clear();
+    		for(int i=0;i<nameList.size();i++){
+    			
+    			
+    			if (markerList.get(i).equals("visit")){
+    			
+    				map.addMarker(new MarkerOptions()
+    				 .title(nameList.get(i))
+    				 .snippet(addressList.get(i))
+    				 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_places))
+    				 .position(new LatLng(latList.get(i), lngList.get(i))));
+    			}};
+    			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latList.get(0), lngList.get(0)), 20));
+    			map.animateCamera(CameraUpdateFactory.zoomTo(10));
+			
+			
+			break;
+
+		case R.id.btndine:
+			
+			map.clear();
+			for(int i=0;i<nameList.size();i++){
+    			
+    			
+				if (markerList.get(i).equals("dine")){
+   			
+   				map.addMarker(new MarkerOptions()
+   				 .title(nameList.get(i))
+   				 .snippet(addressList.get(i))
+   				 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_restaurant))
+   				 .position(new LatLng(latList.get(i), lngList.get(i))));
+	   			}};
+	   			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latList.get(0), lngList.get(0)), 20));
+	   			map.animateCamera(CameraUpdateFactory.zoomTo(10));
+				
+			
+			break;
+
+		case R.id.btnchill:
+			
+				map.clear();
+				for(int i=0;i<nameList.size();i++){
+    			
+    			
+				if (markerList.get(i).equals("chill")){
+   			
+   				map.addMarker(new MarkerOptions()
+   				 .title(nameList.get(i))
+   				 .snippet(addressList.get(i))
+   				 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_chill))
+   				 .position(new LatLng(latList.get(i), lngList.get(i))));
+	   			}};
+	   			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latList.get(0), lngList.get(0)), 20));
+	   			map.animateCamera(CameraUpdateFactory.zoomTo(10));
+				
+			break;
+			
+
+		case R.id.btnshop:
+			
+			Toast.makeText(getApplicationContext(), 
+                    "Empty.", Toast.LENGTH_SHORT).show();
+			break;
+
+			
+		case R.id.btnref:
+			
+			JSONParser();
+			
+			break;
+		
+		
+		case R.id.btnlist:
+			
+			Intent intent = new Intent(TravelActivity.this, ListOfPlacesActivity.class);
+			startActivity(intent);
+			
+			
+			break;
+			
+		
+	
+
+		default:
+			break;
+		}
+
+
+        
+    }//end onView
+	
+	
+	
+	
+
+	public void JSONParser(){
+		
+		ArrayList<Double> latList = new ArrayList<Double>();
+    	ArrayList<Double> lngList = new ArrayList<Double>();
+    	ArrayList<String> nameList = new ArrayList<String>();
+    	ArrayList<String> addressList = new ArrayList<String>();
+    	ArrayList<String> markerList = new ArrayList<String>();
+    	
+    	map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+		map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+   
+        
+        
+		try {
+			JSONObject obj;
+			obj = new JSONObject(loadJSONFile());
+			JSONArray m_jArry = obj.getJSONArray("Places");
+			for (int i = 0; i < m_jArry.length(); i++) {
+				JSONObject jo_inside = m_jArry.getJSONObject(i);
+				String name_value = jo_inside.getString("name");
+				String address_value = jo_inside.getString("address");
+				String marker_value = jo_inside.getString("category");
+				double lat_value = jo_inside.getDouble("lat");
+				double lng_value = jo_inside.getDouble("lng");
+				nameList.add(name_value);
+				addressList.add(address_value);
+				markerList.add(marker_value);
+				latList.add(lat_value);
+				lngList.add(lng_value);
+				
+			}
+
+			
+    		} catch (JSONException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+
+	
+		for(int i=0;i<nameList.size();i++){
+			
+			
+			if (markerList.get(i).equals("visit")){
+			
+				map.addMarker(new MarkerOptions()
+				 .title(nameList.get(i))
+				 .snippet(addressList.get(i))
+				 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_places))
+				 .position(new LatLng(latList.get(i), lngList.get(i))));
+			}
+			 
+		   if (markerList.get(i).equals("dine")){
+	        	 
+	        	map.addMarker(new MarkerOptions()
+				 .title(nameList.get(i))
+				 .snippet(addressList.get(i))
+				 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_restaurant))
+				 .position(new LatLng(latList.get(i), lngList.get(i))));
+
+		   
+		   }
+		   
+		   if (markerList.get(i).equals("chill")){
+	        	 
+	        	map.addMarker(new MarkerOptions()
+				 .title(nameList.get(i))
+				 .snippet(addressList.get(i))
+				 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_chill))
+				 .position(new LatLng(latList.get(i), lngList.get(i))));
+
+		   
+		   }
+		   
+
+		map.setMyLocationEnabled(true);
+		// Move the camera instantly to mylatlng1 with a zoom of 15.
+		map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latList.get(0), lngList.get(0)), 15));
+		map.animateCamera(CameraUpdateFactory.zoomTo(10));
+		
+		
+		}
+			
+
+		
 	}
-    
-    
+	
+        
+	public String loadJSONFile() {
+		String jsonStr = null;
+		try {
+
+			InputStream is = getAssets().open("map_location.json");
+
+			int size = is.available();
+
+			byte[] buffer = new byte[size];
+
+			is.read(buffer);
+
+			is.close();
+
+			jsonStr = new String(buffer, "UTF-8");
+
+		} catch (IOException ex) {
+			ex.printStackTrace();
+			return null;
+		}
+		return jsonStr;
+	}
+	
+	
+	
+	
     public void SetCustomTitle(){
     	TextView textViewTitle = (TextView) findViewById(R.id.ActivityTitle);
     	textViewTitle.setText("TRAVEL SPOTS");
     	}
+    
+    
+    
+    public void ShowList(View view) {
+		Intent intent = new Intent(TravelActivity.this, ListOfPlacesActivity.class);
+		startActivity(intent);
+		
+	}	
+    
+    
+    
+	
+    
 }
