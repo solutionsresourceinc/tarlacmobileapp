@@ -89,5 +89,13 @@
 
     <string name="title_activity_list_of_places">ListOfPlacesActivity</string>
     <string name="title_activity_selected_place">SelectedPlaceActivity</string>
+    <string name="title_activity_announcement_list">AnnouncementListActivity</string>
+    <string name="title_activity_announcement_content">AnnouncementContentActivity</string>
+    <string name="title_activity_news_list">NewsListActivity</string>
+    <string name="title_activity_news_content">NewsContentActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="activity_about_title">HISTORY OF TARLAC</string>
+    <string name="activity_about_content">Tarlac Province is located approximately 125 kms. northeast of Metro Manila, Tarlac is the most multi-cultural of the Central Luzon provinces. A mixture of four distinct groups, the Pampangos, Ilocanos, Pangasinense and Tagalogs, share life in the province. Tarlac is best known for its fine food and vast sugar and riceplantations. That it has fine cooking to offer is due largely to the fact that it is the "Melting Pot of Central Luzon." It offers some of the best cuisines from the places of ancestry of its settlers, the province of Bulacan, Nueva Ecija, Zambales, Pangasinan and the Ilocos Region. Historical sites, fine food, vast plantations, beautiful landscaped parks and golf course, and so many other attractions - all these make the province of Tarlac one of the best places to visit in Central Luzon.The history of Tarlac is the story of its people. Through the years, Tarlac and its people have been an epitome of the Filipino nation, resolute in times of trying challenges and united despite cultural diversities. Although it is Central Luzons youngest province, carved out by the Spaniards on May 28, 1873 from Pangasinan and Pampanga, Tarlaqueños have since played vital roles in shaping Philippine history. Tarlac was among the first eight provinces that started the 1896 revolution, earning its rightful place in the Philippine flag as one of the rays of the sun.</string>
+    <string name="title_activity_hospital">HospitalActivity</string>
 
 </resources>

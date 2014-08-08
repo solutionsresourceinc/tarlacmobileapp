@@ -15,6 +15,7 @@ import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -32,6 +33,8 @@ import android.widget.TextView;
 public class SelectedPlaceActivity extends Activity {
 
 	GoogleMap map;
+	Marker marker;
+	View infoWindow;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -109,71 +112,77 @@ public class SelectedPlaceActivity extends Activity {
 	
 		for(int i=0;i<nameList.size();i++){
 			
+
+			
+			//Set Custom InfoWindow
+	        map.setInfoWindowAdapter(new InfoWindowAdapter() {
+	
+	        	
+	        @Override
+	        public View getInfoWindow(Marker marker) {
+	        	
+	        	
+	        	
+	            return null;
+	        }
+	        
+	        @Override
+	        public View getInfoContents(Marker marker) {
+	        	
+	            View myContentsView = getLayoutInflater().inflate(R.layout.map_info, null);
+	            
+	            TextView tvTitle = ((TextView)myContentsView.findViewById(R.id.title));
+	            tvTitle.setText(marker.getTitle());
+	            
+	            TextView tvSnippet = ((TextView)myContentsView.findViewById(R.id.snippet));
+	            tvSnippet.setText(marker.getSnippet());
+	            
+	            TextView infoSnippet = (TextView)myContentsView.findViewById(R.id.moreinfo);
+	            infoSnippet.setText("Click for more details.");
+	
+	            return myContentsView;
+	        }
+	    });
+	        
+	        //Open New Activity
+	        map.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
+	        
+	        @Override
+	        public void onInfoWindowClick(Marker marker) {
+	
+		        Intent intent = new Intent(SelectedPlaceActivity.this, PlaceDescriptionActivity.class);
+		        intent.putExtra("placetitle", marker.getTitle().toString());
+		        intent.putExtra("snippet", marker.getSnippet().toString());
+		        startActivity(intent);
+		
+		        }
+
+		    });
+			
+
 			
 			if (nameList.get(i).equals(selected)){
+				
+				final LatLng CENTER = new LatLng(latList.get(i), lngList.get(i));
 			
-				Marker marker = map.addMarker(new MarkerOptions()
+				 marker = map.addMarker(new MarkerOptions()
 				 .title(nameList.get(i))
 				 .snippet(addressList.get(i))
 				 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_location))
 				 .position(new LatLng(latList.get(i), lngList.get(i))));
+				 marker.showInfoWindow();
 				 
-				marker.showInfoWindow();
-				
-				//Set Custom InfoWindow
-		        map.setInfoWindowAdapter(new InfoWindowAdapter() {
+				map.moveCamera(CameraUpdateFactory.newLatLng(CENTER));
+				final int zoom = 10;
+                map.animateCamera(CameraUpdateFactory.zoomTo(zoom), null);
 
-		        	
-		        @Override
-		        public View getInfoWindow(Marker arg0) {
-		        	
-		        	
-		        	
-		            return null;
-		        }
-		        
-		        @Override
-		        public View getInfoContents(Marker marker) {
-		        	
-		            View myContentsView = getLayoutInflater().inflate(R.layout.map_info, null);
-		            
-		            TextView tvTitle = ((TextView)myContentsView.findViewById(R.id.title));
-		            tvTitle.setText(marker.getTitle());
-		            
-		            TextView tvSnippet = ((TextView)myContentsView.findViewById(R.id.snippet));
-		            tvSnippet.setText(marker.getSnippet());
-		            
-		            TextView infoSnippet = (TextView)myContentsView.findViewById(R.id.moreinfo);
-		            infoSnippet.setText("Click for more details.");
-
-		            return myContentsView;
-		        }
-		    });
-		        
-		        //Open New Activity
-		        map.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
-		        
-		        @Override
-		        public void onInfoWindowClick(Marker marker) {
-
-			        Intent intent = new Intent(SelectedPlaceActivity.this, PlaceDescriptionActivity.class);
-			        intent.putExtra("placetitle", marker.getTitle().toString());
-			        intent.putExtra("snippet", marker.getSnippet().toString());
-			        startActivity(intent);
-			
-			        }
-			    });
-		        
-		       
 			}
-				
-			
-			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latList.get(i), lngList.get(i)), 20));
-   			map.animateCamera(CameraUpdateFactory.zoomTo(10));
+				//map.animateCamera(CameraUpdateFactory.zoomTo(14));
 		}
+		
 	}
 	
-	
+
     public void SetCustomTitle(){
     	TextView textViewTitle = (TextView) findViewById(R.id.ActivityTitle);
     	textViewTitle.setText("PLACE LOCATION");
@@ -202,5 +211,10 @@ public class SelectedPlaceActivity extends Activity {
         }
         return json;
 
+    }
+    
+    public void setMarkerWithInfoWindow(Marker marker, View infoWindow) {
+        this.marker = marker;
+        this.infoWindow = infoWindow;
     }
 }

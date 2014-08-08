@@ -8,7 +8,9 @@ import android.app.ActionBar.Tab;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
@@ -20,7 +22,7 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
  
-public class EmergencyActivity extends FragmentActivity implements ActionBar.TabListener {
+public class EmergencyActivity extends FragmentActivity implements ActionBar.TabListener{
  
     private ViewPager viewPager;
     private ActionBar actionBar;
@@ -51,12 +53,26 @@ public class EmergencyActivity extends FragmentActivity implements ActionBar.Tab
       	 mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
          mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
 
-         mTabHost.addTab(mTabHost.newTabSpec("tab1").setIndicator("Police Stations"),
+         Drawable PoliceSelector = getResources().getDrawable(R.drawable.xml_tabpolice_hover);
+         Drawable FireSelector = getResources().getDrawable(R.drawable.xml_tabfire_hover);
+         Drawable HospitalSelector = getResources().getDrawable(R.drawable.xml_tabhospital_hover);
+         
+         mTabHost.addTab(mTabHost.newTabSpec("tab1").setIndicator("", PoliceSelector),
              PoliceDeptFragment.class, null);
-         mTabHost.addTab(mTabHost.newTabSpec("tab2").setIndicator("Fire Stations"),
+         mTabHost.addTab(mTabHost.newTabSpec("tab2").setIndicator("", FireSelector),
              FireDeptFragment.class, null);
+         mTabHost.addTab(mTabHost.newTabSpec("tab3").setIndicator("", HospitalSelector),
+                 HospitalFragment.class, null);
+         
+         for (int i = 0; i < mTabHost.getTabWidget().getChildCount(); i++) {
+        	 
+        	 mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.xml_tab_indicator_holo);
+        	 
+             //TextView tv = (TextView) mTabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+             //tv.setTextSize(23);
+         }
        
-        
+
     }
     
     public void SetCustomTitle(){
@@ -73,7 +89,9 @@ public class EmergencyActivity extends FragmentActivity implements ActionBar.Tab
 
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stubs
+		
+	
 		
 	}
 
@@ -89,5 +107,8 @@ public class EmergencyActivity extends FragmentActivity implements ActionBar.Tab
 		
 	}
     	
+	
+
+	
  
 }

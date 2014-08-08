@@ -39,7 +39,7 @@ public class HomeActivity extends Activity {
 				      Intent email = new Intent(Intent.ACTION_SEND);
 				      email.setData(Uri.parse("mailto:"));
 				      email.setType("text/plain");
-				      email.putExtra(Intent.EXTRA_EMAIL, new String[] { "ryanpalado11@gmail.com" });
+				      email.putExtra(Intent.EXTRA_EMAIL, new String[] { "info@solutionsresource.com" });
 				      email.putExtra(Intent.EXTRA_SUBJECT, "User feedback from Tarlac Mobile App");
 				      email.putExtra(Intent.EXTRA_TEXT, "");
 				      email.setType("message/rfc822");
@@ -111,6 +111,17 @@ public class HomeActivity extends Activity {
 		Intent intent = new Intent(HomeActivity.this, EmergencyActivity.class);
 		startActivity(intent);
 		
+	}	
+	
+	public void showNews(View view) {
+		Intent intent = new Intent(HomeActivity.this, AnnouncementActivity.class);
+		startActivity(intent);
+		}
+		
+	public void showAboutPage(View view) {
+		Intent intent = new Intent(HomeActivity.this, AboutActivity.class);
+		startActivity(intent);
+	
 	}	
 	
 }

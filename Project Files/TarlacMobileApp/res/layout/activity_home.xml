@@ -40,7 +40,7 @@
          android:gravity="center"
          android:text="@string/btn_title_travelspots"
          android:textColor="#FFFFFF"
-         android:textSize="35sp" />
+         android:textSize="37sp" />
      
     <Button
         android:id="@+id/AnnounceBtn"
@@ -48,7 +48,8 @@
         android:layout_height="120dp"
         android:layout_below="@+id/TravelBtn"
         android:layout_marginTop="30dp"
-        android:background="@drawable/xml_announcement_hover"/>
+        android:background="@drawable/xml_announcement_hover"
+        android:onClick="showNews"/>
 
     <TextView
         android:id="@+id/AnnounceTitle"
@@ -122,7 +123,8 @@
         android:layout_alignBottom="@+id/OfficeBtn"
         android:layout_alignRight="@+id/EmergencyBtn"
         android:layout_marginTop="30dp"
-        android:background="@drawable/xml_about_hover"/>
+        android:background="@drawable/xml_about_hover"
+        android:onClick="showAboutPage"/>
     
     <TextView
         android:id="@+id/AboutTitle"

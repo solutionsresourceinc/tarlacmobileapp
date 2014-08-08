@@ -7,7 +7,9 @@
          "lng":120.593438,
          "category":"",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 0,
+         "contact_person": ""
       },
       {
          "name":"Tessie's Grill & Roasters",
@@ -16,7 +18,9 @@
          "lng":120.595734,
          "category":"dine",
          "image": "R.drawable.plcdesc_tessie",
-         "description": "Offering lots of different food and flavors, TG&R boasts of roasted chicken and ribs that are original recipes of its proprietor. Proudly Tarlaqueño!"
+         "description": "Offering lots of different food and flavors, TG&R boasts of roasted chicken and ribs that are original recipes of its proprietor. Proudly Tarlaqueño!",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Isdaan Floating Restaurant",
@@ -25,7 +29,9 @@
          "lng":120.609021,
          "category":"dine",
          "image": "R.drawable.plcdesc_isdaan",
-         "description": "A one-of-a-kind in the Province of Tarlac, this restaurant is filled with great Filipino dishes, floating nipa huts, family entertainment and games for all ages, all in a 6-hectare floating wonderland."
+         "description": "A one-of-a-kind in the Province of Tarlac, this restaurant is filled with great Filipino dishes, floating nipa huts, family entertainment and games for all ages, all in a 6-hectare floating wonderland.",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Izakaya Cowan Grill",
@@ -34,7 +40,9 @@
          "lng":120.599400,
          "category":"dine",
          "image": "R.drawable.plcdesc_izakaya_cowan",
-         "description": "Craving for Jap? This authentic Japanese restaurant is located at the heart of Luisita Park,led by a seasoned chef specializing in Japanese cuisine."
+         "description": "Craving for Jap? This authentic Japanese restaurant is located at the heart of Luisita Park,led by a seasoned chef specializing in Japanese cuisine.",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Ninoy Aquino Ancestral House",
@@ -43,7 +51,9 @@
          "lng":120.657152,
          "category":"visit",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Monasterio de Tarlac",
@@ -52,7 +62,9 @@
          "lng":120.431238,
          "category":"visit",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Tarlac Provincial Capitol",
@@ -61,7 +73,9 @@
          "lng":120.588166,
          "category":"visit",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"San Sebastian Cathedral",
@@ -70,7 +84,9 @@
          "lng":120.588054,
          "category":"visit",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Capas National Shrine",
@@ -79,7 +95,9 @@
          "lng":120.545254,
          "category":"visit",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"JSJ Goat Farm",
@@ -88,7 +106,9 @@
          "lng":120.599620,
          "category":"visit",
          "image": "R.drawable.plcdesc_goatfarm",
-         "description": "Uniquely located on the plains of Gerona, Tarlac, JSJ Goat Farm boasts of a technologically advanced and well-researched facility and well-bred Australian goats. Producing different types of cheese, pastillas, cajetas and fresh goat’s milk, JSJ Farm is in the market as Aussie Pure Goat’s Milk all over the country."
+         "description": "Uniquely located on the plains of Gerona, Tarlac, JSJ Goat Farm boasts of a technologically advanced and well-researched facility and well-bred Australian goats. Producing different types of cheese, pastillas, cajetas and fresh goat's milk, JSJ Farm is in the market as Aussie Pure Goat's Milk all over the country.",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"St.Josemaria Escriva Parish",
@@ -97,7 +117,9 @@
          "lng":120.594722,
          "category":"visit",
          "image": "R.drawable.plcdesc_sjeparish",
-         "description": "A newly constructed church along MacArthur Highway in the town of Gerona, the St.Josemaria Escriva Parish is home to St. Escriva’s true relic, the only one in Asia."
+         "description": "A newly constructed church along MacArthur Highway in the town of Gerona, the St.Josemaria Escriva Parish is home to St. Escriva’s true relic, the only one in Asia.",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Asiaten Hotel",
@@ -106,7 +128,9 @@
          "lng":120.596102,
          "category":"chill",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Central Park Hotel",
@@ -115,7 +139,9 @@
          "lng":120.604581,
          "category":"chill",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"La Majarica Hotel",
@@ -124,7 +150,9 @@
          "lng":120.595372,
          "category":"chill",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Microtel Inn and Suites",
@@ -133,7 +161,9 @@
          "lng":120.602244,
          "category":"chill",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Star Homes Hotel & Apartment",
@@ -142,7 +172,9 @@
          "lng":120.579590,
          "category":"chill",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Grand L Square Hotel",
@@ -151,7 +183,9 @@
          "lng":120.599078,
          "category":"chill",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"Azaya Garden Resort",
@@ -160,7 +194,9 @@
          "lng":120.599366,
          "category":"chill",
          "image": "R.drawable.plcdesc_azaya",
-         "description": "A fusion of good food, karaoke huts, spacious events area, cozy rooms, swimming pool, and tons of adventure activities, Azaya Garden Resort is a one-stop place for your leisure and recreation."
+         "description": "A fusion of good food, karaoke huts, spacious events area, cozy rooms, swimming pool, and tons of adventure activities, Azaya Garden Resort is a one-stop place for your leisure and recreation.",
+         "contact_no": 98765,
+         "contact_person": ""
          
       },
       {
@@ -170,7 +206,9 @@
          "lng":120.597522,
          "category":"chill",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       },
       {
          "name":"The Luisita Golf and Country Club",
@@ -179,7 +217,9 @@
          "lng":120.621380,
          "category":"chill",
          "image": "R.drawable.plcdesc_noimage",
-         "description": ""
+         "description": "",
+         "contact_no": 98765,
+         "contact_person": ""
       }
    ]
 }

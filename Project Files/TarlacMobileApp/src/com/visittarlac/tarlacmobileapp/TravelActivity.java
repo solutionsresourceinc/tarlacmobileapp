@@ -101,6 +101,7 @@ public class TravelActivity extends Activity implements OnClickListener {
          
         @Override
         public View getInfoContents(Marker marker) {
+        	
             View myContentsView = getLayoutInflater().inflate(R.layout.map_info, null);
             
             TextView tvTitle = ((TextView)myContentsView.findViewById(R.id.title));

@@ -95,7 +95,7 @@
             android:layout_below="@+id/TitleContact"
             android:layout_marginTop="5dp"
             android:drawableLeft="@drawable/ic_business_card"
-            android:text="Mr.John Doe"
+            android:text="name"
             android:textColor="#3c3c3c"
             android:textSize="18sp" />
 
@@ -109,10 +109,9 @@
             android:background="@android:color/transparent"
             android:gravity="left"
             android:drawableLeft="@drawable/ic_phone"
-            android:text="00000000000"
+            android:text="number"
             android:textColor="#3c3c3c"
-            android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textSize="20sp"  />
         
     </RelativeLayout>
 

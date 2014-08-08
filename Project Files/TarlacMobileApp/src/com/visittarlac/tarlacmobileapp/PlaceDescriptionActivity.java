@@ -27,6 +27,7 @@ public class PlaceDescriptionActivity extends Activity {
 	 TextView PlaceSnippet;
 	 ImageView PlaceImage;
 	 TextView PlaceDesc;
+	 Button PlaceContact;
 	 String placename;
 
 	 
@@ -107,7 +108,7 @@ public class PlaceDescriptionActivity extends Activity {
 	    
 
 	    //Call Contact Person Button
-	    Button PlaceContact = (Button)findViewById(R.id.PlaceContact);
+	    PlaceContact = (Button)findViewById(R.id.PlaceContact);
 	    PlaceContact.setOnClickListener(new View.OnClickListener() {
 	         public void onClick(View view) {
 	         Button b = (Button)view;
@@ -125,6 +126,7 @@ public class PlaceDescriptionActivity extends Activity {
     	ArrayList<String> addressList = new ArrayList<String>();
     	ArrayList<String> descriptionList = new ArrayList<String>();
     	ArrayList<String> imageList = new ArrayList<String>();
+    	ArrayList<Integer> contactnoList = new ArrayList<Integer>();
     	
     	
 
@@ -139,6 +141,7 @@ public class PlaceDescriptionActivity extends Activity {
 				String address_value = jo_inside.getString("address");
 				String description_value = jo_inside.getString("description");
 				String image_value = jo_inside.getString("image");
+				Integer mobilenumber_value = jo_inside.getInt("contact_no");
 				
 				
 				
@@ -146,6 +149,7 @@ public class PlaceDescriptionActivity extends Activity {
 				addressList.add(address_value);
 				descriptionList.add(description_value);
 				imageList.add(image_value);
+				contactnoList.add(mobilenumber_value);
 			
 				
 			}
@@ -164,7 +168,7 @@ public class PlaceDescriptionActivity extends Activity {
 					    Drawable image = getResources().getDrawable(resId);
 						PlaceImage.setImageDrawable(image);
 						PlaceDesc.setText(descriptionList.get(i));
-						PlaceContact.setText("123456789");
+						PlaceContact.setText(Integer.toString(contactnoList.get(i)));
 
 				}	 
 			}
@@ -196,7 +200,7 @@ public class PlaceDescriptionActivity extends Activity {
 
 	            is.close();
 
-	            json = new String(buffer, "UTF-8");
+	            json = new String(buffer,"UTF-8");
 
 
 	        } catch (IOException ex) {
