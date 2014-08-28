@@ -21,71 +21,14 @@
     <string name="title_activity_travel">Travel Spots</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_emergency">Emergency Hotlines</string>
-    <!-- Hotlines -->
-    <string name="call_amosMbl">Call 0910-891-0964</string>
-    <string name="call_bamban">Call 0921-540-4809</string>
-    <string name="call_camiling">Call 934-0959</string>
-    <string name="call_camilingMbl">Call 0908-127-4114</string>
-    <string name="call_capas">Call 925-0398</string>
-    <string name="call_capasMbl">Call 0908-395-3790</string>
-    <string name="call_capasSubMbl">Call 0929-469-3648</string>
-    <string name="call_gerona">Call 608-0140</string>
-    <string name="call_geronaMbl">Call 0921-477-2362</string>
-    <string name="call_lapaz">Call 611-0600 PNP</string>
-    <string name="call_lapazMbl">Call 0929-469-3648</string>
-    <string name="call_mayantoc">Call 491-5010</string>
-    <string name="call_mayantocMbl">Call 0919-468-6542</string>
-    <string name="call_moncada">Call 601-0432</string>
-    <string name="call_moncadaMbl">Call 0906-219-7243</string>
-    <string name="call_paniqui">Call 931-1110 PNP</string>
-    <string name="call_paniquiMbl">Call 0907-379-6606</string>
-    <string name="call_sanjoseMbl">Call 0921-239-3617</string>
-    <string name="call_staignacia">Call 605-0205 PNP</string>
-    <string name="call_staignaciaMbl">Call 0907-480-2692</string>
-    <string name="call_tarlac">Call 982-1356</string>
-    <string name="call_tarlac1">Call 982-1159</string>
-    <string name="call_tarlacMbl">Call 0919-580-7558</string>
-    <string name="call_victoria">Call 930-0166</string>
-    <string name="call_victoriaMbl">Call 0917-514-4311</string>
-    <!-- Fire Stations Title -->
-    <string name="txt_amos">Amos Fire Station</string>
-    <string name="txt_bamban">Bamban Fire Station</string>
-    <string name="txt_camiling">Camiling Fire Station</string>
-    <string name="txt_capas">Capas Fire Station</string>
-    <string name="txt_capasSub">Capas Fire Sub-Station</string>
-    <string name="txt_gerona">Gerona Fire Station</string>
-    <string name="txt_lapaz">La Paz Fire Station</string>
-    <string name="txt_mayantoc">Mayantoc Fire Station</string>
-    <string name="txt_moncada">Moncada Fire Station</string>
-    <string name="txt_paniqui">Paniqui Fire Station</string>
-    <string name="txt_sanjose">San Jose Fire Station</string>
-    <string name="txt_staignacia">Sta. Ignacia Fire Station</string>
-    <string name="txt_tarlac">Tarlac City Fire Station</string>
-    <string name="txt_victoria">Victoria Fire Station</string>
-    <string name="title_activity_main">Hotlines</string>
-    <string name="title_activity_feedback">Downloadable Forms</string>
+    
+    
 
-    <!-- Feedback Button Title -->
-    <string name="btn_download1">Biometric Exemption Form</string>
-    <string name="btn_download2">Personal Data Sheet (Form 212)</string>
-    <string name="btn_download3">Performance Evaluation Report (PER) – Permanent</string>
-    <string name="btn_download4">Performance Evaluation Report (PER) – Casual / Contractual / JO / Volunteer</string>
-    <string name="btn_download5">Request for Hiring</string>
-    <string name="btn_download6">Request for Rehiring – Same Rate</string>
-    <string name="btn_download7">Request for Rehiring – With Increase</string>
-    <string name="btn_download8">JO and Contractual Job Description Form</string>
-    <string name="btn_download9">Application for Civil Service Examination</string>
-    <string name="btn_download10">Form 200 – New EOR Format </string>
+   
     <string name="title_activity_place_description">PlaceDescriptionActivity</string>
     <string name="title_activity_announcement">AnnouncementActivity</string>
 
-    <!-- Strings of Dropdown on Travel Spots -->
-    <string-array name="places_array">
-        <item>Places to Visit</item>
-        <item>Places to Chill</item>
-        <item>Places to Shop</item>
-        <item>Places to Dine</item>
-    </string-array>
+   
 
     <string name="title_activity_list_of_places">ListOfPlacesActivity</string>
     <string name="title_activity_selected_place">SelectedPlaceActivity</string>
@@ -95,7 +38,7 @@
     <string name="title_activity_news_content">NewsContentActivity</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="activity_about_title">HISTORY OF TARLAC</string>
-    <string name="activity_about_content">Tarlac Province is located approximately 125 kms. northeast of Metro Manila, Tarlac is the most multi-cultural of the Central Luzon provinces. A mixture of four distinct groups, the Pampangos, Ilocanos, Pangasinense and Tagalogs, share life in the province. Tarlac is best known for its fine food and vast sugar and riceplantations. That it has fine cooking to offer is due largely to the fact that it is the "Melting Pot of Central Luzon." It offers some of the best cuisines from the places of ancestry of its settlers, the province of Bulacan, Nueva Ecija, Zambales, Pangasinan and the Ilocos Region. Historical sites, fine food, vast plantations, beautiful landscaped parks and golf course, and so many other attractions - all these make the province of Tarlac one of the best places to visit in Central Luzon.The history of Tarlac is the story of its people. Through the years, Tarlac and its people have been an epitome of the Filipino nation, resolute in times of trying challenges and united despite cultural diversities. Although it is Central Luzons youngest province, carved out by the Spaniards on May 28, 1873 from Pangasinan and Pampanga, Tarlaqueños have since played vital roles in shaping Philippine history. Tarlac was among the first eight provinces that started the 1896 revolution, earning its rightful place in the Philippine flag as one of the rays of the sun.</string>
+    <string name="activity_about_content">Tarlac Province is located approximately 125 kms. northeast of Metro Manila, Tarlac is the most multi-cultural of the Central Luzon provinces. A mixture of four distinct groups, the Pampangos, Ilocanos, Pangasinense and Tagalogs, share life in the province. Tarlac is best known for its fine food and vast sugar and riceplantations. That it has fine cooking to offer is due largely to the fact that it is the "Melting Pot of Central Luzon." It offers some of the best cuisines from the places of ancestry of its settlers, the province of Bulacan, Nueva Ecija, Zambales, Pangasinan and the Ilocos Region. Historical sites, fine food, vast plantations, beautiful landscaped parks and golf course, and so many other attractions - all these make the province of Tarlac one of the best places to visit in Central Luzon. The history of Tarlac is the story of its people. Through the years, Tarlac and its people have been an epitome of the Filipino nation, resolute in times of trying challenges and united despite cultural diversities. Although it is Central Luzons youngest province, carved out by the Spaniards on May 28, 1873 from Pangasinan and Pampanga, Tarlaqueños have since played vital roles in shaping Philippine history. Tarlac was among the first eight provinces that started the 1896 revolution, earning its rightful place in the Philippine flag as one of the rays of the sun.</string>
     <string name="title_activity_hospital">HospitalActivity</string>
 
 </resources>

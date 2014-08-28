@@ -1,17 +1,833 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
- 	xmlns:tools="http://schemas.android.com/tools"  
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context=".DeviceFragment" >
-     
-    <TextView android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Page Under Construction"
-        android:textSize="20dp"
-        android:layout_centerInParent="true"/>
-     
- 
-</RelativeLayout>
+   
+   <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:paddingBottom="10dp"
+       android:paddingLeft="10dp"
+       android:paddingRight="10dp"
+       android:paddingTop="5dp" >
+
+       <TextView
+           android:id="@+id/ptv1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Tarlac City Police Station"
+           android:textSize="18sp" />
+       
+       
+     	<TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Burgos St., Brgy. Cut-Cut, Tarlac City"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callTCPS1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0929-584-0885" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" 
+           android:onClick="callcapas"/>
+
+       <Button
+           android:id="@+id/callTCPS2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 982-2101"
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call"  />
+
+       <Button
+           android:id="@+id/callTCPS3"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 982-0233" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callTCPS4"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 982-0266" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Tarlac City Police Substation"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="JP Rizal St.MacArthur Hwy,Tarlac City"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callTCPSub1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 982-2101" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callTCPSub2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 982-5087" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="National Bureau of Investigation - Tarlac City"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Macabulos Dr, Tarlac City"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callNBI"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 982-1348"
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call"  />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Anao Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Poblacion Street, Anao, Tarlac City, 2310"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callAnao1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0919-811-6700" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callAnao2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 493-2022" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv5"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Bamban Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="MacArthur Highway, Bamban, Tarlac City, 2317"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callBamban"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0908-926-1494" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv6"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Camiling Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Quezon Avenue, Camiling, Tarlac City, 2306"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callCamiling1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0919-877-7767" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callCamiling2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 934-0988" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv7"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Capas Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="MacArthur Highway, Capas, Tarlac City, 2315"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callCapas1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0905-356-4526" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callCapas2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 925-0365" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callCapas3"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 925-0166" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv9"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Concepcion Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Concepcion, Tarlac City, 2316, Tarlac, C Cortez Street"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callConcepcion1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0906-570-0138" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callConcepcion2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0915-896-5453" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callConcepcion3"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 923-0175" 
+           android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv10"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Gerona Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Don Basilio Santiago Street, Gerona, Tarlac City, 2302"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callGerona1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0918-478-2349" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callGerona2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 608-0512" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv11"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="La Paz Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Address not available"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callLaPaz1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0917-505-8678" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call"/>
+
+       <Button
+           android:id="@+id/callLaPaz2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 611-0600" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv12"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Mayantoc Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Municipal Road, Mayantoc, Tarlac City, 2304"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callMayantoc"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0905-768-4973" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv13"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Moncada Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Mac Arthur Highway, Moncada, Tarlac City, 2308"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callMoncada1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0916-414-6485" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callMoncada2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 601-0408" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv14"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Paniqui Police Station "
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Gomez Street, Paniqui, Tarlac City, 2307"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callPaniqui1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0919-876-8257" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callPaniqui2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 491-7120" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv15"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Pura Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Address not available"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callPura"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0919-419-3211" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv16"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Ramos Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Address not available"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callRamos"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0909-744-9544" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv17"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="San Clemente Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Address not available"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callSClemente1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0929-741-3965" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callSClemente2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 934-0989" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv18"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="San Jose Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Address not available"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callSJose"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0918-963-6492" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv19"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="San Manuel Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Mac Arthur Highway, San Manuel, Tarlac City, 2309"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callSManuel1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0929-139-5862"
+           android:textStyle="bold"
+            android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callSManuel2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call (045)600-0213" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv20"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Sta. Ignacia Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Milla Street Corner Romulo Highway, Santa Ignacia, Tarlac City, 2303"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callSIgnacia1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0929-764-9643" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callSIgnacia2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call (045)605-0205" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <ImageView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:paddingBottom="2dp"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp"
+           android:paddingTop="2dp"
+           android:scaleType="fitXY"
+           android:src="?android:attr/listDivider" />
+
+       <TextView
+           android:id="@+id/ptv21"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="10dp"
+           android:text="Victoria Police Station"
+           android:textSize="18sp" />
+       
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Victoria Pura Road Corner Rizal Street, Victoria, Tarlac City, 2313"
+         android:textSize="15sp" />
+
+       <Button
+           android:id="@+id/callVictoria1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call 0999-675-6631" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+
+       <Button
+           android:id="@+id/callVictoria2"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="Call (045)930-0166" 
+           android:textStyle="bold"
+           android:background="@drawable/xml_btn_call" />
+   </LinearLayout>
+
+  </ScrollView>

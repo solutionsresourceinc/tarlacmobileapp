@@ -8,218 +8,198 @@
          "category":"",
          "image": "R.drawable.plcdesc_noimage",
          "description": "",
-         "contact_no": 0,
-         "contact_person": ""
+         "contact_no": 0
       },
       {
          "name":"Tessie's Grill & Roasters",
-         "address":"Address Here",
+         "address":"Mac Arthur Highway, San Roque 2300",
          "lat":15.477523,
          "lng":120.595734,
          "category":"dine",
          "image": "R.drawable.plcdesc_tessie",
-         "description": "Offering lots of different food and flavors, TG&R boasts of roasted chicken and ribs that are original recipes of its proprietor. Proudly Tarlaqueño!",
-         "contact_no": 98765,
-         "contact_person": ""
+         "description": "Offering lots of different food and flavors, TG&R boasts of roasted chicken and ribs that are original recipes of its proprietor. Proudly Tarlaquenso!",
+         "contact_no": "(6345) 800 1550"
       },
       {
          "name":"Isdaan Floating Restaurant",
-         "address":"Address Here",
+         "address":"McArthur Hwy., Gerona, Tarlac, Philippines",
          "lat":15.593400,
          "lng":120.609021,
          "category":"dine",
          "image": "R.drawable.plcdesc_isdaan",
          "description": "A one-of-a-kind in the Province of Tarlac, this restaurant is filled with great Filipino dishes, floating nipa huts, family entertainment and games for all ages, all in a 6-hectare floating wonderland.",
-         "contact_no": 98765,
-         "contact_person": ""
+         "contact_no": "(045) 491-2219"
       },
       {
          "name":"Izakaya Cowan Grill",
-         "address":"Address Here",
+         "address":"McArthur Highway, San Miguel, Plaza Luisita, Tarlac City, 2300",
          "lat":15.432326,
          "lng":120.599400,
          "category":"dine",
          "image": "R.drawable.plcdesc_izakaya_cowan",
          "description": "Craving for Jap? This authentic Japanese restaurant is located at the heart of Luisita Park,led by a seasoned chef specializing in Japanese cuisine.",
-         "contact_no": 98765,
-         "contact_person": ""
+         "contact_no": "045-985 0355"
       },
       {
          "name":"Ninoy Aquino Ancestral House",
-         "address":"Address Here",
+         "address":"A. Luna St., cor. Timbol St., Concepcion, Tarlac",
          "lat":15.324247,
          "lng":120.657152,
          "category":"visit",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_ninoy_ancestral",
+         "description": "National Hero Ninoy Aquino is a known son of Tarlac. Born in the quiet town of Concepcion, Ninoy Aquino resided at this old house, along with the memories and roots of three generations of a humble family since 1939. The Ninoy Aquino Ancestral House still holds the family's charm as echoed by the pictures along the walls, furniture that still make the house warm, and other artefacts that shout remembrances. The ancestral house is just a walking distance from the Concepcion Municipal Hall, where Ninoy once served as Mayor before becoming the Provincial Governor and then Senator. Said hall is another historical place that appears in the current 500-peso bill.",
+         "contact_no": "(045) 923 1149"
       },
       {
          "name":"Monasterio de Tarlac",
-         "address":"Address Here",
+         "address":"Servants of the Risen Christ Communication Center, Monasterio de Tarlac, Mt.Resurrection, Eco-Park, San Jose, Tarlac",
          "lat":15.436534,
          "lng":120.431238,
          "category":"visit",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_monasterio",
+         "description": "The veneration of the True Cross finds its origin in the legend of Helena. According to Christian tradition, when Emperor Constantine granted religious freedom to Christians in the Roman Empire in 313 A.D., his mother, Queen Helena, later in 326 A.D. made pilgrimage to the Holy Land to locate those places sacred to Christians and find the Cross of Jesus. With the help of Christians there, she found many places where Jesus lived, and carried out his ministry. Queen Helena had churches built in many of these sacred sites (e.g., the Tomb of the Holy Sepulchre, the Calvary, the Nativity, etc.). She also found the True Cross, buried under a pagan temple, the nails, and the title that was affixed to the Cross. She is said to have verified the true cross among the three that were unearthed through miracles (a dead girl was restored to life when touched by the True Cross). She left part of the Cross in Jerusalem, gave part to her son in Constantinople, and took part back to Rome where the Church of the Holy Cross of Jerusalem was built. Pieces of the Cross were venerated as holy relics, and fragments were given as gifts to many churches in Europe. Sixteen centuries later in 2007, a fragment of the True Cross found its place in the Church of the Risen Christ in a peaceful and quiet Monasterio de Tarlac. ",
+         "contact_no": "(045) 493 3002"
       },
       {
          "name":"Tarlac Provincial Capitol",
-         "address":"Address Here",
+         "address":"Provincial Capitol, 2300 Tarlac, Tarlac",
          "lat":15.480356,
          "lng":120.588166,
          "category":"visit",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_tcapitol",
+         "description": "The highest seat of political power of the province is located at a hill in Barangay San Vicente, Tarlac City. Built in 1909, the Tarlac Provincial Capitol stands tall and proud to this day. During the Japanese occupation, the capitol was vacated and then used as the provincial headquarters of the Imperial Army. It suffered great damages during the Second World War, but in 1946, the United States of America helped rebuild and improve its structure. Because of its historical background, the picture of the capitol's facade appears in the current 500 peso bill.",
+         "contact_no": "(045) 982-1234"
       },
       {
          "name":"San Sebastian Cathedral",
-         "address":"Address Here",
+         "address":"F. Tanedo Street corner P. Burgos Street, Tarlac City, Tarlac",
          "lat":15.487714,
          "lng":120.588054,
          "category":"visit",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_sebcathedral",
+         "description": "The San Sebastian Cathedral is found at the heart of Tarlac City, across the Tarlac Plazuela, at one end of F.Tañedo Street. It was once the venue of the commencement excercise of the Cientifico Literaria Universidad de Filipinas in 1899, when then-Honorable Emilio Aguinaldo was the president of the republic and of the university. Now, the cathedral is one that is frequently visited by pilgrims because of the exposed Blessed Sacrament housed in a chapel inside of it. Recently constructed inside is the cathedral's baptistery.",
+         "contact_no": "(045) 982-0859"
       },
       {
          "name":"Capas National Shrine",
-         "address":"Address Here",
+         "address":"Barangay Cristo Rey, Capas, Tarlac",
          "lat":15.349029,
          "lng":120.545254,
          "category":"visit",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_capas_shrine",
+         "description": "At kilometer 106 in Capas, the Japanese forces then unloaded their Filipino and American prisoners from boxcars to continue the Death March. The dead ones, they dumped right on the spot. Built in the 1960s, an inverted V-shape marks this place in memory of the perished. On the structure's foot and in both its sides, a sculpture that depicts the inhumanity experienced during the Japanese regime may be seen. A children's playground has been built within the monument's compound, ironically, to represent the now-experienced freedom of the country. It has been said that the inverted-V is visible through Google Maps.",
+         "contact_no": "none"
       },
       {
          "name":"JSJ Goat Farm",
-         "address":"Address Here",
+         "address":"Rizal Street, Gerona, 2302, Tarlac",
          "lat":15.631385,
          "lng":120.599620,
          "category":"visit",
          "image": "R.drawable.plcdesc_goatfarm",
          "description": "Uniquely located on the plains of Gerona, Tarlac, JSJ Goat Farm boasts of a technologically advanced and well-researched facility and well-bred Australian goats. Producing different types of cheese, pastillas, cajetas and fresh goat's milk, JSJ Farm is in the market as Aussie Pure Goat's Milk all over the country.",
-         "contact_no": 98765,
-         "contact_person": ""
+         "contact_no": "045-908 0488"
       },
       {
          "name":"St.Josemaria Escriva Parish",
-         "address":"Address Here",
+         "address":"MacArthur Hwy, Gerona, Philippines",
          "lat":15.622769,
          "lng":120.594722,
          "category":"visit",
          "image": "R.drawable.plcdesc_sjeparish",
-         "description": "A newly constructed church along MacArthur Highway in the town of Gerona, the St.Josemaria Escriva Parish is home to St. Escriva’s true relic, the only one in Asia.",
-         "contact_no": 98765,
-         "contact_person": ""
+         "description": "A newly constructed church along MacArthur Highway in the town of Gerona, the St.Josemaria Escriva Parish is home to St. Escriva's true relic, the only one in Asia.",
+         "contact_no": "none"
       },
       {
          "name":"Asiaten Hotel",
-         "address":"Address Here",
+         "address":"Gate III San Sebastian Village, Tarlac City",
          "lat":15.470614,
          "lng":120.596102,
          "category":"chill",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_asiaten",
+         "description": "Asiaten is best known as a family and business hotel. With its Fiber Optic Wifi, most of its guests stay to either work away from the pressure of the office or take entertainment delight in a home away from home.",
+         "contact_no": "+63 45 982 0355"
       },
       {
          "name":"Central Park Hotel",
-         "address":"Address Here",
+         "address":"Luisita Business Park, Hacienda Luisita, San Miguel 2301",
          "lat":15.439120,
          "lng":120.604581,
          "category":"chill",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_centralpark",
+         "description": "Sitting at the heart of the Luisita Business Park, Central Park Hotel boasts of stylish hotel living and international-standard facilities that complement the neighboring Luisita Golf and Country Club. If serenity is what you crave most, its ambiance shouts of a well-maintained escape from the city life with its garden of topiaries, rich foliage, fountain and aviary.",
+         "contact_no": "+63 045 9851912"
       },
       {
          "name":"La Majarica Hotel",
-         "address":"Address Here",
+         "address":"Mac Arthur Hi-way corner Ligtasan Street, Tarlac City 2300",
          "lat":15.483420,
          "lng":120.595372,
          "category":"chill",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_lamajarica",
+         "description": "La Majarica Hotel is a boutique hotel situated along the national high way, half way between the Manila and Baguio at the commercial and business centers of Tarlac City. The Hotel offers a choice of 40 well-equipped guestrooms with deluxe amenities such as colored TV with cable channel and remote, air-condition, centralized solar-heating system for hot water usage, telephone with NDD/IDD, free WI-FI zone, 24 hours standby power generators assuming no power breakdown and a spacious and secured parking lots. For recreation, their guest can enjoy free use of swimming pool.",
+         "contact_no": "(045) 982-2314"
       },
       {
          "name":"Microtel Inn and Suites",
-         "address":"Address Here",
+         "address":"Luisita, Tarlac, Philippines 2301",
          "lat":15.439835,
          "lng":120.602244,
          "category":"chill",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_microtel",
+         "description": "This 50-room inn underscores the sensible charms of contemporary hotel living at the pulsating center of a rustic town. Featuring elegant and air-conditioned havens, this hotel in Tarlac City reflects an unwavering dedication to reasonably priced lodgings, international standards of quality, and heartfelt hospitality.",
+         "contact_no": "(+63 045) 982 1770"
       },
       {
          "name":"Star Homes Hotel & Apartment",
-         "address":"Address Here",
+         "address":"2nd Street Olivian Ville Subdivision San Vicente, Tarlac City",
          "lat":15.466169,
          "lng":120.579590,
          "category":"chill",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_star_homes",
+         "description": "Star Homes is located at the center of Central Luzon. Tarlac borders Pampanga to the south, Nueva Ecija to the east, Pangasinan to the north, and Zambales to the west. It is an ideal oasis of quiet and peace. And whether you are traveling for business or leisure, for a honeymoon or a family holiday, we have a hotel that's right for YOU. So come and stay with us here at Starhomes Hotel Apartment and experience the best stay here in Tarlac.",
+         "contact_no": "+63 45 491-4991"
       },
       {
          "name":"Grand L Square Hotel",
-         "address":"Address Here",
+         "address":"The Grand L Square & Residences Km. 120 Mc Arthur Highway, San Rafael Tarlac ,Philippines",
          "lat":15.458413,
          "lng":120.599078,
          "category":"chill",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_grand",
+         "description": "L-Square Hotel is most famous for the five-star quality treatment of its guests. With its executive and posh look combined, it shouts its eagerness to provide the best luxury experience. Add that to the friendly staff and you'll have the perfect place where you can be much treated like a King or a Queen.",
+         "contact_no": "+63 045 4910714"
       },
       {
          "name":"Azaya Garden Resort",
-         "address":"Address Here",
+         "address":"McArthur Highway, Estrada, Capas, Tarlac",
          "lat":15.405929,
          "lng":120.599366,
          "category":"chill",
          "image": "R.drawable.plcdesc_azaya",
          "description": "A fusion of good food, karaoke huts, spacious events area, cozy rooms, swimming pool, and tons of adventure activities, Azaya Garden Resort is a one-stop place for your leisure and recreation.",
-         "contact_no": 98765,
-         "contact_person": ""
+         "contact_no": "(045) 985 0045"
          
       },
       {
          "name":"Sun Garden Hotel",
-         "address":"Address Here",
+         "address":"2300 Milagrosa Street, Aquino Subdivision, Tarlac",
          "lat":15.485483,
          "lng":120.597522,
          "category":"chill",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_sungarden",
+         "description": "Sun Garden Hotel is a really simple, yet very relaxing hotel. Here is where you find the most affordable rooms and amenities.",
+         "contact_no": "+63 45 982-0688"
       },
       {
          "name":"The Luisita Golf and Country Club",
-         "address":"Address Here",
+         "address":"Luisita Access Road, San Miguel, Tarlac City, 2301, Tarlac",
          "lat":15.435215,
          "lng":120.621380,
          "category":"chill",
-         "image": "R.drawable.plcdesc_noimage",
-         "description": "",
-         "contact_no": 98765,
-         "contact_person": ""
+         "image": "R.drawable.plcdesc_luisita_golf",
+         "description": "Considered as one of the finest 18- hole, par-72 Championship course in the country. It has hosted top events like the President's Cup and other golf spectacle sin the country. It sits on a 70-hectare area bounded on the east by a sugar central. The front nine is built mostly on an open but rolling ground while the back nine is shaped by meandering creek. The 2-Storey Clubhouse is of classic Spanish architecture with an approximate building area of 2,000 sq.m. It offers a 135 degree view of the course. The principal interesting feature is water. Twelve of its 18 holes have well-placed water hazards, the most awesome of which is its Signature Hole on 17.",
+         "contact_no": "(045) 818 3911"
       }
    ]
 }

@@ -23,12 +23,14 @@ import android.content.Intent;
 
 public class PlaceDescriptionActivity extends Activity {
 
+	 TextView TitleContact;
 	 TextView PlaceName;
 	 TextView PlaceSnippet;
 	 ImageView PlaceImage;
-	 TextView PlaceDesc;
+	 //TextView PlaceDesc;
 	 Button PlaceContact;
 	 String placename;
+	 String contact;
 
 	 
 	@Override
@@ -55,7 +57,7 @@ public class PlaceDescriptionActivity extends Activity {
         tv.setTypeface(tf);
         
       //customfont placename
-      	Typeface tf1 = Typeface.createFromAsset(getAssets(),"fonts/BebasNeue Bold.otf");
+      	Typeface tf1 = Typeface.createFromAsset(getAssets(),"fonts/ProximaNova-Bold.otf");
         TextView tv1 = (TextView) findViewById(R.id.PlaceTitle);
         tv1.setTypeface(tf1);
         
@@ -84,9 +86,7 @@ public class PlaceDescriptionActivity extends Activity {
         TextView tv7 = (TextView) findViewById(R.id.PlaceContact);
         tv7.setTypeface(tf7);
         
-        Typeface tf8 = Typeface.createFromAsset(getAssets(),"fonts/ProximaNova-Regular.otf");
-        TextView tv8 = (TextView) findViewById(R.id.PlaceContactPerson);
-        tv8.setTypeface(tf8);
+        
         
         
         
@@ -96,7 +96,11 @@ public class PlaceDescriptionActivity extends Activity {
         
         PlaceName = (TextView) findViewById(R.id.PlaceTitle);
 		PlaceSnippet = (TextView) findViewById(R.id.PlaceSnippet);
-		PlaceDesc =(TextView)findViewById(R.id.PlaceDescription);
+		//PlaceDesc =(TextView)findViewById(R.id.PlaceDescription);
+		TitleContact=(TextView)findViewById(R.id.TitleContact);
+		TextViewEx txtViewEx = (TextViewEx) findViewById(R.id.PlaceDescription);
+		
+		
 	
 	    Intent intent = getIntent();
 	    String placetitle = intent.getStringExtra("placetitle");
@@ -126,7 +130,7 @@ public class PlaceDescriptionActivity extends Activity {
     	ArrayList<String> addressList = new ArrayList<String>();
     	ArrayList<String> descriptionList = new ArrayList<String>();
     	ArrayList<String> imageList = new ArrayList<String>();
-    	ArrayList<Integer> contactnoList = new ArrayList<Integer>();
+    	ArrayList<String> contactnoList = new ArrayList<String>();
     	
     	
 
@@ -141,7 +145,7 @@ public class PlaceDescriptionActivity extends Activity {
 				String address_value = jo_inside.getString("address");
 				String description_value = jo_inside.getString("description");
 				String image_value = jo_inside.getString("image");
-				Integer mobilenumber_value = jo_inside.getInt("contact_no");
+				String mobilenumber_value = jo_inside.getString("contact_no");
 				
 				
 				
@@ -167,10 +171,18 @@ public class PlaceDescriptionActivity extends Activity {
 						int resId = getResources().getIdentifier(resName, "drawable", getPackageName());
 					    Drawable image = getResources().getDrawable(resId);
 						PlaceImage.setImageDrawable(image);
-						PlaceDesc.setText(descriptionList.get(i));
-						PlaceContact.setText(Integer.toString(contactnoList.get(i)));
+						txtViewEx.setText(descriptionList.get(i), true);
+						PlaceContact.setText(contactnoList.get(i));
 
-				}	 
+				}
+				
+				contact =PlaceContact.getText().toString();
+				if (contact.equals("none")){
+					
+					TitleContact.setVisibility(View.INVISIBLE);
+					PlaceContact.setVisibility(View.INVISIBLE);
+					
+				}
 			}
 			
     		} catch (JSONException e) {
@@ -178,7 +190,6 @@ public class PlaceDescriptionActivity extends Activity {
     			e.printStackTrace();
     		}
 
-	      
 	}
 	
 	 public void SetCustomTitle(){

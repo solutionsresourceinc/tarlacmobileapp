@@ -10,272 +10,524 @@
        android:layout_height="wrap_content"
        android:orientation="vertical"
        android:paddingBottom="10dp"
-       android:paddingLeft="20dp"
-       android:paddingRight="20dp"
+       android:paddingLeft="10dp"
+       android:paddingRight="10dp"
        android:paddingTop="5dp" >
 
      <TextView
-         android:id="@+id/textView1"
+         android:id="@+id/ftv1"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:paddingTop="10dp"
-         android:text="@string/txt_amos"
+         android:text="Tarlac City Fire Station - SINSP Jimmy Suba"
+         android:textSize="18sp" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Gate 3 San Sebastian Village, Tarlac City 2300 (operation)"
          android:textSize="15sp" />
         
         <Button
-            android:id="@+id/callAmosMbl"
+            android:id="@+id/callTCFS1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/call_amosMbl" />
-            
-    <TextView
-        android:id="@+id/textView2"
+            android:text="Call 982‐1356" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Burgos St., Cut‐cut, Tarlac City 2300 (office)"
+         android:textSize="15sp" />   
+     
+        <Button
+            android:id="@+id/callTCFS2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Call 982‐1159" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+        
+     <TextView
+         android:id="@+id/ftv2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="10dp"
+         android:text="Office of the Provincial Fire Marshal"
+         android:textSize="18sp" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Provincial Capitol Compound, Tarlac City 2300"
+         android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/callOPFM"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Call 491-0475" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider"
+		     android:layout_marginTop="10dp" />
+        
+     <TextView
+         android:id="@+id/ftv3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="10dp"
+         android:text="Bamban Fire Station - SF01 Allan C. Cuya"
+         android:textSize="18sp" />
+        
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Anupul, Bamban, Tarlac 2317"
+         android:textSize="15sp" />
+     
+        <Button
+            android:id="@+id/callBamban"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Call 09097046545" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+        
+     <TextView
+         android:id="@+id/ftv4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="10dp"
+         android:text="Camiling Fire Station - SFO3 Jose N Ildefonso"
+         android:textSize="18sp" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Camiling Municipal Cmpd, Quezon Ave. Camiling, Tarlac 2306"
+         android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/callCamiling"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Call 0908‐2208704" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider"
+		     android:layout_marginTop="10dp" />
+        
+     <TextView
+        android:id="@+id/ftv5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_bamban"
-        android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/callBambanMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_bamban" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/txt_camiling"
-            android:textSize="15sp" />
+        android:paddingTop="10dp"
+        android:text="Capas Fire Station - SINSP Rene P. Fesetan"
+        android:textSize="18sp" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Sto. Domingo II, Capas, Tarlac 2315"
+         android:textSize="15sp" />
         
         <Button
-            android:id="@+id/callCamilingTel"
+            android:id="@+id/callCapas"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/call_camiling" />
+            android:text="Call 0929‐1088466" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+        
+     <TextView
+         android:id="@+id/ftv6"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="10dp"
+         android:text="Concepcion Fire Station - INSP Edwin Dela Fuente"
+         android:textSize="18sp" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Public Market, Gil Cortez St., Conception, Tarlac 2316"
+         android:textSize="15sp" />
         
         <Button
-            android:id="@+id/callCamilingMbl"
+            android:id="@+id/callConcepcion"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/call_camilingMbl" />
-        
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/txt_capas"
-            android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callCapasTel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_capas" />
-        
-        <Button
-            android:id="@+id/callCapasMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_capasMbl" />
-        
-         <TextView
-             android:id="@+id/textView5"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:paddingTop="10dp"
-             android:text="@string/txt_capasSub"
-             android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callCapasSubMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_capasSubMbl" />
-        
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/txt_gerona"
-            android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callGeronaTel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_gerona" />
-        
-        <Button
-            android:id="@+id/callGeronaMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_geronaMbl" />
-        
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/txt_lapaz"
-            android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callLaPazTel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_lapaz" />
-        
-        <Button
-            android:id="@+id/callLaPazMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_lapazMbl" />
-        
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/txt_mayantoc"
-            android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callMayantocTel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_mayantoc" />
-        
-        <Button
-            android:id="@+id/callMayantocMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_mayantocMbl" />
-        
-         <TextView
-             android:id="@+id/textView9"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:paddingTop="10dp"
-             android:text="@string/txt_moncada"
-             android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callMoncadaTel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_moncada" />
-        
-        <Button
-            android:id="@+id/callMoncadaMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_moncadaMbl" />
-        
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/txt_paniqui"
-            android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callPaniquiTel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_paniqui" />
-        
-        <Button
-            android:id="@+id/callPaniquiMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_paniquiMbl" />
-        
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/txt_sanjose"
-            android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callSanJoseMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_sanjoseMbl" />
-        
-         <TextView
-             android:id="@+id/textView12"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:paddingTop="10dp"
-             android:text="@string/txt_staignacia"
-             android:textSize="15sp" />
-        
-        <Button
-            android:id="@+id/callStaIgnaciaTel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_staignacia" />
-        
-        <Button
-            android:id="@+id/callStaIgnaciaMbl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/call_staignaciaMbl" />
+            android:text="Call 0933‐9492909" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/> 
             
-         <TextView
-             android:id="@+id/textView13"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:paddingTop="10dp"
-             android:text="@string/txt_tarlac"
-             android:textSize="15sp" />
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+            
+     <TextView
+        android:id="@+id/ftv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Gerona Fire Station - SFO1 Manuel A. Sambo"
+        android:textSize="18sp" />
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Poblacion 3, Gerona, Tarlac 2302"
+         android:textSize="15sp" />
         
         <Button
-            android:id="@+id/callTarlacTel"
+            android:id="@+id/callGerona"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/call_tarlac" />
-        
+            android:text="Call 931‐3638" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/> 
+            
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+           
+    <TextView
+        android:id="@+id/ftv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="La Paz Fire Station - SFO2 Santiago Jr. B. Duran"
+        android:textSize="18sp" />
+    
+    <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Catalan St., San Roque, La Paz, Tarlac 2314"
+         android:textSize="15sp" />
         
         <Button
-            android:id="@+id/callTarlac1Tel"
+            android:id="@+id/callLaPaz"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/call_tarlac1" />
+            android:text="Call 0907‐3796606" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/> 
+            
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+            
+   <TextView
+        android:id="@+id/ftv9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Mayantoc Fire Station - SFO2 Cedric Cruz"
+        android:textSize="18sp" />
+   
+   <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Municipal Cmpd., Poblacion Norte, Mayantoc, Tarlac 2304"
+         android:textSize="15sp" />
         
         <Button
-            android:id="@+id/callTarlacMbl"
+            android:id="@+id/callMayantoc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/call_tarlacMbl" />
+            android:text="Call 491‐5010" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
         
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:text="@string/txt_victoria"
-            android:textSize="15sp" />
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+        
+  <TextView
+        android:id="@+id/ftv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Moncada Fire Station - SFO3 Rustom Billiones"
+        android:textSize="18sp" />
+  
+  <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Municipal Cmpd., Poblacion 1, Moncada, Tarlac 2308"
+         android:textSize="15sp" />
         
         <Button
-            android:id="@+id/callVictoriaTel"
+            android:id="@+id/callMoncada"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/call_victoria" />
+            android:text="Call 606‐5432" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+ 
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider"
+		     android:layout_marginTop="10dp" />
+ <TextView
+        android:id="@+id/ftv11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Paniqui Fire Station - SFO1 Manuel A. Sambo OIC"
+        android:textSize="18sp" />
+ 
+ <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Carriedo St., Poblacion Norte, Paniqui, Tarlac 2307"
+         android:textSize="15sp" />
         
         <Button
-            android:id="@+id/callVictoriaMbl"
+            android:id="@+id/callPaniqui"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/call_victoriaMbl" />
+            android:text="Call 931‐1110" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
         
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+        
+  <TextView
+        android:id="@+id/ftv12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Ramos Fire Station - SFO1 Warlito Acosta"
+        android:textSize="18sp" />
+  
+  <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Poblacion Center, Ramos, Tarlac 2311"
+         android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/callRamos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Call 491‐7670" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+        
+  <TextView
+        android:id="@+id/ftv13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="San Jose Fire Station - SFO1 Christopher M. Feliciano"
+        android:textSize="18sp" />
+  
+  <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Municipal Compound, San Jose, Tarlac"
+         android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/callSanJose"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Call 0921‐2393617" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+        
+  <TextView
+        android:id="@+id/ftv14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Sta. Ignacia Fire Station - SFO2 Neil L. Rafael"
+        android:textSize="18sp" />
+  
+  <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Municipal Cmpd., Poblacion East, Sta Ignacia, Tarlac 2303"
+         android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/callSantaIgnacia"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Call 0921‐2393617" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+        
+         <ImageView
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:paddingBottom="2dp"
+		     android:paddingLeft="5dp"
+		     android:paddingRight="5dp"
+		     android:paddingTop="2dp"
+		     android:scaleType="fitXY"
+		     android:src="?android:attr/listDivider" 
+		     android:layout_marginTop="10dp"/>
+        
+   <TextView
+        android:id="@+id/ftv15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Victoria Fire Staton - SFO2 Fernando Duran"
+        android:textSize="18sp" />
+   
+   <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingTop="2dp"
+         android:text="Municipal. Cmpd., San Gavino, Victoria, Tarlac 2313"
+         android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/callVictoria"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Call 930‐0837" 
+            android:textStyle="bold"
+            android:background="@drawable/xml_btn_call"/>
+
     </LinearLayout>
   </ScrollView>
     

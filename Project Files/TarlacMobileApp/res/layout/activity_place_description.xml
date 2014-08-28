@@ -7,7 +7,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
         tools:context="${packageName}.${activityClass}" >
 
         <TextView
@@ -19,9 +18,10 @@
             android:text="Title"
             android:textColor="#3c3c3c"
             android:layout_marginBottom="10dp"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:layout_marginLeft="7dp"
-            android:layout_marginRight="7dp" />
+            android:layout_marginRight="7dp" 
+            android:layout_marginTop="5dp"/>
 
         <ImageView
             android:id="@+id/PlaceImage"
@@ -42,17 +42,20 @@
             android:textColor="#3c3c3c"
             android:layout_marginTop="10dp"
             android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/PlaceDescription"
+        
+        
+        <com.visittarlac.tarlacmobileapp.TextViewEx
+	       android:id="@+id/PlaceDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/PlaceTitle"
             android:layout_below="@+id/TitleDesc"
             android:layout_marginTop="5dp"
             android:text="Description here"
             android:textColor="#3c3c3c"
-            android:textSize="18sp" />
+            android:textSize="18sp" 
+	       />
+
+      
 
         <TextView
             android:id="@+id/TitleAdd"
@@ -87,24 +90,14 @@
             android:textColor="#3c3c3c"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/PlaceContactPerson"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/PlaceTitle"
-            android:layout_below="@+id/TitleContact"
-            android:layout_marginTop="5dp"
-            android:drawableLeft="@drawable/ic_business_card"
-            android:text="name"
-            android:textColor="#3c3c3c"
-            android:textSize="18sp" />
+        
 
         <Button
             android:id="@+id/PlaceContact"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_alignLeft="@+id/PlaceTitle"
-            android:layout_below="@+id/PlaceContactPerson"
+            android:layout_below="@+id/TitleContact"
             android:layout_marginTop="5dp"
             android:background="@android:color/transparent"
             android:gravity="left"

@@ -57,7 +57,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCseSuxaFi4yL-vkyev5by-fX5sN9_w5bk" />
+            android:value="AIzaSyBwCnDCMWRR0fR_bIDymbLW3UZkoSnyegU" />
 
         <activity
             android:name=".EmergencyActivity"
@@ -65,12 +65,7 @@
             android:label="@string/title_activity_emergency"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name=".CalendarActivity"
-            android:configChanges="orientation"
-            android:label="@string/title_activity_feedback"
-            android:screenOrientation="portrait" >
-        </activity>
+        
         <activity
             android:name=".PlaceDescriptionActivity"
             android:configChanges="orientation"
@@ -79,31 +74,45 @@
         </activity>
         <activity
             android:name=".AnnouncementActivity"
-            android:label="@string/title_activity_announcement" >
+            android:label="@string/title_activity_announcement" 
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".ListOfPlacesActivity"
-            android:label="@string/title_activity_list_of_places" >
+            android:label="@string/title_activity_list_of_places"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".SelectedPlaceActivity"
-            android:label="@string/title_activity_selected_place" >
+            android:label="@string/title_activity_selected_place" 
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".NewsListActivity"
-            android:label="@string/title_activity_news_list" >
+            android:label="@string/title_activity_news_list" 
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".NewsContentActivity"
-            android:label="@string/title_activity_news_content" >
+            android:label="@string/title_activity_news_content" 
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="@string/title_activity_about" >
+            android:label="@string/title_activity_about" 
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".HospitalFragment"
-            android:label="@string/title_activity_hospital" >
+            android:label="@string/title_activity_hospital" 
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

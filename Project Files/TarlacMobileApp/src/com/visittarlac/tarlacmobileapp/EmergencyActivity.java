@@ -1,8 +1,6 @@
 package com.visittarlac.tarlacmobileapp;
 
 
-import com.visittarlac.tarlacmobileapp.R;
-
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
