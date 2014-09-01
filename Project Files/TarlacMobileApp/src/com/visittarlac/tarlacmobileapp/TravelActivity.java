@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
@@ -105,10 +106,10 @@ public class TravelActivity extends Activity implements OnClickListener {
             View myContentsView = getLayoutInflater().inflate(R.layout.map_info, null);
             
             TextView tvTitle = ((TextView)myContentsView.findViewById(R.id.title));
-            tvTitle.setText(marker.getTitle());
+            tvTitle.setText(Html.fromHtml(marker.getTitle()));
             
             TextView tvSnippet = ((TextView)myContentsView.findViewById(R.id.snippet));
-            tvSnippet.setText(marker.getSnippet());
+            tvSnippet.setText(Html.fromHtml(marker.getSnippet()));
             
             TextView infoSnippet = (TextView)myContentsView.findViewById(R.id.moreinfo);
             infoSnippet.setText("Click for more details.");

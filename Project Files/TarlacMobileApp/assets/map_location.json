@@ -17,7 +17,7 @@
          "lng":120.595734,
          "category":"dine",
          "image": "R.drawable.plcdesc_tessie",
-         "description": "Offering lots of different food and flavors, TG&R boasts of roasted chicken and ribs that are original recipes of its proprietor. Proudly Tarlaquenso!",
+         "description": "Offering lots of different food and flavors, TG&R boasts of roasted chicken and ribs that are original recipes of its proprietor. Proudly Tarlaque&ntilde;o!",
          "contact_no": "(6345) 800 1550"
       },
       {
@@ -72,12 +72,12 @@
       },
       {
          "name":"San Sebastian Cathedral",
-         "address":"F. Tanedo Street corner P. Burgos Street, Tarlac City, Tarlac",
+         "address":"F. Ta&ntilde;edo Street corner P. Burgos Street, Tarlac City, Tarlac",
          "lat":15.487714,
          "lng":120.588054,
          "category":"visit",
          "image": "R.drawable.plcdesc_sebcathedral",
-         "description": "The San Sebastian Cathedral is found at the heart of Tarlac City, across the Tarlac Plazuela, at one end of F.Tañedo Street. It was once the venue of the commencement excercise of the Cientifico Literaria Universidad de Filipinas in 1899, when then-Honorable Emilio Aguinaldo was the president of the republic and of the university. Now, the cathedral is one that is frequently visited by pilgrims because of the exposed Blessed Sacrament housed in a chapel inside of it. Recently constructed inside is the cathedral's baptistery.",
+         "description": "The San Sebastian Cathedral is found at the heart of Tarlac City, across the Tarlac Plazuela, at one end of F.Ta&ntilde;edo Street. It was once the venue of the commencement excercise of the Cientifico Literaria Universidad de Filipinas in 1899, when then-Honorable Emilio Aguinaldo was the president of the republic and of the university. Now, the cathedral is one that is frequently visited by pilgrims because of the exposed Blessed Sacrament housed in a chapel inside of it. Recently constructed inside is the cathedral's baptistery.",
          "contact_no": "(045) 982-0859"
       },
       {

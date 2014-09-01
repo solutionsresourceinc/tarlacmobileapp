@@ -14,6 +14,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -107,8 +108,8 @@ public class PlaceDescriptionActivity extends Activity {
 	    String snippet = intent.getStringExtra("snippet");
 	    
 	    
-	    PlaceName.setText(placetitle);
-	    PlaceSnippet.setText(snippet);
+	    PlaceName.setText(Html.fromHtml(placetitle));
+	    PlaceSnippet.setText(Html.fromHtml(snippet));
 	    
 
 	    //Call Contact Person Button
@@ -171,7 +172,7 @@ public class PlaceDescriptionActivity extends Activity {
 						int resId = getResources().getIdentifier(resName, "drawable", getPackageName());
 					    Drawable image = getResources().getDrawable(resId);
 						PlaceImage.setImageDrawable(image);
-						txtViewEx.setText(descriptionList.get(i), true);
+						txtViewEx.setText(Html.fromHtml(descriptionList.get(i)),true);
 						PlaceContact.setText(contactnoList.get(i));
 
 				}

@@ -24,6 +24,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -135,7 +136,7 @@ public class SelectedPlaceActivity extends Activity {
 	            tvTitle.setText(marker.getTitle());
 	            
 	            TextView tvSnippet = ((TextView)myContentsView.findViewById(R.id.snippet));
-	            tvSnippet.setText(marker.getSnippet());
+	            tvSnippet.setText(Html.fromHtml(marker.getSnippet()));
 	            
 	            TextView infoSnippet = (TextView)myContentsView.findViewById(R.id.moreinfo);
 	            infoSnippet.setText("Click for more details.");

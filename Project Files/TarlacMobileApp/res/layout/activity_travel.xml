@@ -67,18 +67,18 @@
            android:layout_marginRight="7dp"
            android:layout_marginTop="305dp"
            android:background="@drawable/xml_btn_filter"
-           android:src="@drawable/filter_list" 
-           android:onClick="ShowList"/>
+           android:onClick="ShowList"
+           android:src="@drawable/filter_list" />
        
         <ImageButton
-           android:id="@+id/btnref"
-           android:layout_width="47dp"
-           android:layout_height="45dp"
-           android:layout_gravity="right|top"
-           android:layout_marginRight="7dp"
-           android:layout_marginTop="255dp"
-           android:background="@drawable/xml_btn_filter"
-           android:src="@drawable/filter_refresh" />
+            android:id="@+id/btnref"
+            android:layout_width="47dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="255dp"
+            android:background="@drawable/xml_btn_filter"
+            android:src="@drawable/filter_refresh" />
         
    </FrameLayout>
    
