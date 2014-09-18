@@ -1,0 +1,39 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity" >
+    
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AboutActivity" >
+    
+   <com.visittarlac.tarlacmobileapp.TextViewEx
+       android:id="@+id/tvtitle"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       android:text="History of Tarlac"
+       android:textSize="25sp"
+       android:layout_marginTop="5dp"
+       />
+        
+   <ImageView
+        android:id="@+id/ivTarlac" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" 
+        android:background="@drawable/image_border"
+        android:layout_below="@+id/tvtitle"/>
+
+    <com.visittarlac.tarlacmobileapp.TextViewEx
+        android:id="@+id/textViewEx"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_below="@+id/ivTarlac"
+        android:layout_marginTop="5dp"/>
+    
+    </RelativeLayout>
+</ScrollView>
