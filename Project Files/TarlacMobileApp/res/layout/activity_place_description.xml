@@ -46,7 +46,7 @@
         
         <com.visittarlac.tarlacmobileapp.TextViewEx
 	       android:id="@+id/PlaceDescription"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/TitleDesc"
             android:layout_marginTop="5dp"

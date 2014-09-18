@@ -1,169 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="fill_parent"
-    android:layout_height="match_parent" 
-    android:background="#2DCC70">
+    android:layout_height="match_parent"
+    android:background="#2ecc71" >
 
-<RelativeLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:clickable="true"
-    android:gravity="center"
-    android:orientation="horizontal"
-    android:paddingBottom="30dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:scrollbars="vertical"
-    tools:context="${packageName}.${activityClass}" >
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="5dp" 
+    android:focusable="true"
+	android:focusableInTouchMode="true">
 
-    
-    
-      <Button
-        android:id="@+id/TravelBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/xml_travelspots_hover"
-        android:onClick="showMap" />
-   
-     <TextView
-         android:id="@+id/TravelTitle"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_alignBaseline="@+id/TravelBtn"
-         android:layout_alignBottom="@+id/TravelBtn"
-         android:layout_alignRight="@+id/EmergencyBtn"
-         android:layout_marginLeft="110dp"
-         android:gravity="center"
-         android:text="@string/btn_title_travelspots"
-         android:textColor="#FFFFFF"
-         android:textSize="37sp" />
-     
-    <Button
-        android:id="@+id/AnnounceBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_below="@+id/TravelBtn"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/xml_announcement_hover"
-        android:onClick="showNews"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:padding="5dp" 
+        android:onClick="showMap"
+        android:background="@drawable/xml_home_bg_transparent"
+        android:layout_marginBottom="5dp">
 
-    <TextView
-        android:id="@+id/AnnounceTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/AnnounceBtn"
-        android:layout_alignRight="@+id/AnnounceBtn"
-        android:layout_below="@+id/AnnounceBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_announcement"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-         />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/xml_travelspots_hover" >
+        </ImageView>
 
-    <Button
-        android:id="@+id/EmergencyBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_above="@+id/AnnounceTitle"
-        android:layout_marginLeft="40dp"
-        android:layout_toRightOf="@+id/AnnounceBtn"
-        android:background="@drawable/xml_emergency_hover"
-        android:onClick="showHotlines"/>
+        <TextView
+            android:id="@+id/txttravel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:ellipsize="marquee"
+            android:text="Travel Spots"
+            android:textSize="35sp"
+            android:textColor="#ffffff" >
+        </TextView>
+    </RelativeLayout>
     
+     <com.visittarlac.tarlacmobileapp.ExpandableHeightGridView
+        android:id="@+id/gridView1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:horizontalSpacing="5dp"
+        android:numColumns="auto_fit"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:verticalSpacing="5dp" />
     
-    <TextView
-        android:id="@+id/EmergencyTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/EmergencyBtn"
-        android:layout_alignRight="@+id/EmergencyBtn"
-        android:layout_below="@+id/EmergencyBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_emergency"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        />
-    
-     <Button
-          android:id="@+id/OfficeBtn"
-          android:layout_width="120dp"
-          android:layout_height="120dp"
-          android:layout_alignLeft="@+id/AnnounceTitle"
-          android:layout_alignRight="@+id/AnnounceTitle"
-          android:layout_below="@+id/AnnounceTitle"
-          android:layout_marginTop="30dp"
-          android:background="@drawable/xml_officeno_hover"
-           />
-        
-    <TextView
-        android:id="@+id/OfficeTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/AnnounceBtn"
-        android:layout_alignRight="@+id/AnnounceBtn"
-        android:layout_below="@+id/OfficeBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_officeno"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        />
-
-   <Button
-        android:id="@+id/AboutBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignBaseline="@+id/OfficeBtn"
-        android:layout_alignBottom="@+id/OfficeBtn"
-        android:layout_alignRight="@+id/EmergencyBtn"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/xml_about_hover"
-        android:onClick="showAboutPage"/>
-    
-    <TextView
-        android:id="@+id/AboutTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/AboutBtn"
-        android:layout_alignRight="@+id/AboutBtn"
-        android:layout_below="@+id/AboutBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_about"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-         />
-   
-    <Button
-        android:id="@+id/FeedbackBtn"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_alignLeft="@+id/OfficeTitle"
-        android:layout_below="@+id/OfficeTitle"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/xml_feedback_hover"/>
-    
-    
-     <TextView
-        android:id="@+id/FeedbackTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/FeedbackBtn"
-        android:layout_alignRight="@+id/FeedbackBtn"
-        android:layout_below="@+id/FeedbackBtn"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/btn_title_feedback"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        />
-    
-</RelativeLayout>
+</LinearLayout>
 
 </ScrollView>
+      
+        
+
+    

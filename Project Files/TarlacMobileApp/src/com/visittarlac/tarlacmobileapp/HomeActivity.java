@@ -12,116 +12,170 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
+import java.util.ArrayList;
 
+import android.view.MotionEvent;
+import android.view.View.OnTouchListener;
+import android.widget.AdapterView;
+import android.widget.ScrollView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.GridView;
 
-public class HomeActivity extends Activity {
+public class HomeActivity extends Activity implements OnTouchListener {
+    /** Called when the activity is first created. */
+	
+	private GridviewAdapter mAdapter;
+	private ArrayList<String> listCountry;
+	private ArrayList<Integer> listFlag;
+	private GridView gridView;
+	private ScrollView scrollView;
+	public static Typeface MenuGridFont;
+	Intent intent;
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+        
+        //Actionbar center
+        getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getActionBar().setCustomView(R.layout.abs_layout);
+        
+        SetCustomTitle();
+        SetTravelBtnFont();
+        
+        //Grid Button Fonts
+        MenuGridFont = Typeface.createFromAsset(getAssets(), "fonts/ProximaNova-Regular.otf");
+        
+        prepareList();
+        
+        // prepared arraylist and passed it to the Adapter class
+        mAdapter = new GridviewAdapter(this,listCountry, listFlag);
+        
 
-	Button buttonSend;
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
-		//Actionbar center
-		getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		getActionBar().setCustomView(R.layout.abs_layout);
-		SetCustomTitle();
-		//Custom Font
-		SetFonts();
-		
-				//Send Email using Gmail
-				buttonSend=(Button)findViewById(R.id.FeedbackBtn);
-				buttonSend.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					  
-					  
-				      Intent email = new Intent(Intent.ACTION_SEND);
-				      email.setData(Uri.parse("mailto:"));
-				      email.setType("text/plain");
-				      email.putExtra(Intent.EXTRA_EMAIL, new String[] { "info@solutionsresource.com" });
-				      email.putExtra(Intent.EXTRA_SUBJECT, "User feedback from Tarlac Mobile App");
-				      email.putExtra(Intent.EXTRA_TEXT, "");
-				      email.setType("message/rfc822");
-				      //if you want to use gmail directly.
-					  //email.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail");
-					  startActivity(email);
-		 
-					}
-				});
-		
-		
-	}
-	
-	public void SetCustomTitle(){
-	TextView textViewTitle = (TextView) findViewById(R.id.ActivityTitle);
-	textViewTitle.setText("WELCOME");
-	}
-	
-	public void SetFonts(){
-		
-		Typeface tf = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Bold.otf");
-        TextView tv = (TextView) findViewById(R.id.ActivityTitle);
-        tv.setTypeface(tf);
+        // Set custom adapter to gridview
+        ExpandableHeightGridView gridView = new ExpandableHeightGridView(this);
+        gridView.setVerticalScrollBarEnabled(false); 
+        gridView=(ExpandableHeightGridView) findViewById(R.id.gridView1);
+        gridView.setAdapter(mAdapter);
         
-        //Button Fonts
-        Typeface tf1 = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Regular.otf");
-        TextView tv1 = (TextView) findViewById(R.id.AnnounceTitle);
-        tv1.setTypeface(tf1);
-        
-        Typeface tf2 = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Regular.otf");
-        TextView tv2 = (TextView) findViewById(R.id.AboutTitle);
-        tv2.setTypeface(tf2);
-        
-        Typeface tf3 = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Regular.otf");
-        TextView tv3 = (TextView) findViewById(R.id.EmergencyTitle);
-        tv3.setTypeface(tf3);
-        
-        Typeface tf4 = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Regular.otf");
-        TextView tv4 = (TextView) findViewById(R.id.FeedbackTitle);
-        tv4.setTypeface(tf4);
-        
-        Typeface tf5 = Typeface.createFromAsset(getAssets(),
-                "fonts/ProximaNova-Regular.otf");
-        TextView tv5 = (TextView) findViewById(R.id.OfficeTitle);
-        tv5.setTypeface(tf5);
-        
-        Typeface tf6 = Typeface.createFromAsset(getAssets(),
-                "fonts/BebasNeue Bold.otf");
-        TextView tv6 = (TextView) findViewById(R.id.TravelTitle);
-        tv6.setTypeface(tf6);
-        
-     
-        
+        // Implement On Item click listener
+        gridView.setOnItemClickListener(new OnItemClickListener() 
+        {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+					long arg3) {
+				
+				switch (position)
+				
+			    {
+			    case 0:
+			    	intent = new Intent(HomeActivity.this, AnnouncementActivity.class);
+					startActivity(intent);
+
+			        break;
+			    case 1:
+			    	intent = new Intent(HomeActivity.this, 	EmergencyActivity.class);
+					startActivity(intent);
+			    	
+			        break;  
+			    
+			    case 2:
+					
+					    	
+					break;  
+					    
+			
+			    case 3:
+			    	intent = new Intent(HomeActivity.this, AboutActivity.class);
+			    	startActivity(intent);
+	    	
+			    	break;  
+
+			    case 4:
+			    	Intent email = new Intent(Intent.ACTION_SEND);
+                    email.setData(Uri.parse("mailto:"));
+                    email.setType("text/plain");
+                    email.putExtra(Intent.EXTRA_EMAIL, new String[] { "info@solutionsresource.com" });
+                    email.putExtra(Intent.EXTRA_SUBJECT, "User feedback from Tarlac Mobile App");
+                    email.putExtra(Intent.EXTRA_TEXT, "");
+                    email.setType("message/rfc822");
+                    //if you want to use gmail directly.
+                    //email.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail");
+                    startActivity(email);
+	    	
+			    	break;  
+	    
+			    }
+			
+			}
+		});
        
+        gridView.setOnTouchListener(new OnTouchListener(){
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_MOVE){
+                    return true;
+                }
+                return false;
+            }
+
+        });
+        
+        scrollView=(ScrollView)findViewById(R.id.scrollView);
+        scrollView.scrollTo(scrollView.getTop(), 0);
+        gridView.setExpanded(true);
+        
+    }
+    
+    public void prepareList()
+    {
+    	  listCountry = new ArrayList<String>();
+    	  
+    	  listCountry.add("Announcements");
+    	  listCountry.add("Emergency");
+          listCountry.add("Office Numbers");
+          listCountry.add("About");
+          listCountry.add("Feedback");
+         
+          
+          
+          listFlag = new ArrayList<Integer>();
+          listFlag.add(R.drawable.xml_announcement_hover);
+          listFlag.add(R.drawable.xml_emergency_hover);
+          listFlag.add(R.drawable.xml_officeno_hover);
+          listFlag.add(R.drawable.xml_about_hover);
+          listFlag.add(R.drawable.xml_feedback_hover);
+          
+    }
+
+	@Override
+	public boolean onTouch(View v, MotionEvent event) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
-	public void showMap(View view) {
-		Intent intent = new Intent(HomeActivity.this, TravelActivity.class);
-		startActivity(intent);
-		
-	}	
-	
-	public void showHotlines(View view) {
-		Intent intent = new Intent(HomeActivity.this, EmergencyActivity.class);
-		startActivity(intent);
-		
-	}	
-	
-	public void showNews(View view) {
-		Intent intent = new Intent(HomeActivity.this, AnnouncementActivity.class);
-		startActivity(intent);
-		}
-		
-	public void showAboutPage(View view) {
-		Intent intent = new Intent(HomeActivity.this, AboutActivity.class);
-		startActivity(intent);
-	
-	}	
-	
+	 public void SetCustomTitle(){
+		    TextView textViewTitle = (TextView) findViewById(R.id.ActivityTitle);
+		    textViewTitle.setText("WELCOME");
+		    Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/ProximaNova-Bold.otf");
+		    textViewTitle.setTypeface(tf);
+		    }
+	 
+	 public void SetTravelBtnFont(){
+
+		 	TextView textViewTitle = (TextView) findViewById(R.id.txttravel);
+		    Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Bold.otf");
+		    textViewTitle.setTypeface(tf);
+
+	 }
+	 
+	 public void showMap(View view) {
+	        Intent intent = new Intent(HomeActivity.this, TravelActivity.class);
+	        startActivity(intent);
+	        
+	    }   
 }
+   
